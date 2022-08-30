@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Ajal.de.Raiz/static/css/main.f71713b0.css",
+    "main.js": "/Ajal.de.Raiz/static/js/main.1256bfe3.js",
+    "static/js/787.2ab6ff59.chunk.js": "/Ajal.de.Raiz/static/js/787.2ab6ff59.chunk.js",
+    "static/media/Logo.png": "/Ajal.de.Raiz/static/media/Logo.bcd008e87bc6e01400e8.png",
+    "index.html": "/Ajal.de.Raiz/index.html",
+    "main.f71713b0.css.map": "/Ajal.de.Raiz/static/css/main.f71713b0.css.map",
+    "main.1256bfe3.js.map": "/Ajal.de.Raiz/static/js/main.1256bfe3.js.map",
+    "787.2ab6ff59.chunk.js.map": "/Ajal.de.Raiz/static/js/787.2ab6ff59.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f71713b0.css",
+    "static/js/main.1256bfe3.js"
+  ]
+}
