@@ -12,7 +12,7 @@ function Header() {
             <div className='logo'>
                 <img src={logo} alt='Ajal de Raiz' width='200px;' />
             </div>
-        </section>
+        </section> 
     )
 }
 
