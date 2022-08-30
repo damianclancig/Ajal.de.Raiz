@@ -1,10 +1,14 @@
-import './App.css';
-import Navbar from './Components/Navbar/Navbar'
+import Header from './Components/Header/Header'
+import Content from './Components/Content/Content'
+import Footer from './Components/Footer/Footer'
 
+import './App.css'
 function App() {
   return (
     <>
-      <Navbar />
+      <Header />
+      <Content />
+      <Footer />
     </>
   );
 }

@@ -1,0 +1,30 @@
+
+.list {
+    list-style-type: none;
+    background-color: #85FFBD;
+    background-image: linear-gradient(340deg, #85FFBD 0%, #fffb7da6 100%);
+
+
+    display: flex;
+    width: 96%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin: 0px;
+    clear: both;
+}
+.items {
+    margin-right: 20px;
+    font-size: 20px;
+    color: #000000;
+    cursor: pointer;
+}
+
+.btn {
+    color: #000;
+    font-size: 18px;
+}
+
+.push-left {
+    margin-right: auto;
+}
