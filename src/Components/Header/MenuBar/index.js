@@ -1,6 +1,6 @@
-import Navbar from "./Navbar/Navbar";
-import SearchTab from "./SearchTab";
-import ShopCart from "./ShopCart";
+import Navbar from "../Navbar";
+import SearchTab from "../SearchTab";
+import ShopCart from "../ShopCart";
 import './MenuBar.css'
 
 function MenuBar() {

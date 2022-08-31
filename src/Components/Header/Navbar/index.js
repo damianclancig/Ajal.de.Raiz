@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 import './Navbar.css'
 
 function Navbar(prop) {
@@ -10,7 +12,9 @@ function Navbar(prop) {
 
     return (
         <nav className='push-left'>
-            <button onClick={toggleNav} className="btn">Menu</button>
+            <div className="menu">
+                <FontAwesomeIcon icon={faBars} className="menu-icon" onClick={toggleNav} />
+            </div>
             {(toggleMenu) && (
                 <ul className="list">
                     <li className="items">Inicio</li>

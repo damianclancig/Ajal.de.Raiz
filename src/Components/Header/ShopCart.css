@@ -1,4 +1,20 @@
 .carrito {
-    width: 100px;
     margin-left: 20px;
+    margin-right: 20px;
+    padding: 5px;
+    width: 20px;
+    background-color: #1fc271;
+    border-radius: 20px;
+    text-align: center;
 }
+
+.carrito:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.cart-icon {
+    color: white;
+    font-size: 15px;
+}
+
