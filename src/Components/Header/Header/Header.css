@@ -2,6 +2,7 @@
     font-size: 30px;
     text-align: center;
     height: 60px;
+    color: #d46f37;
 }
 
 .logo {
@@ -9,8 +10,8 @@
     /* border-width: 0px 0px 6px 0px;
     border-style: solid;
     border-color: black; */
-    background: rgb(229,255,213);
-    background: radial-gradient(circle, rgba(229,255,213,1) 0%, rgba(229,255,213,0.6054796918767507) 13%, rgba(252,70,70,0) 50%);
+    /* background: rgb(229,255,213); */
+    background: radial-gradient(circle, rgb(255, 247, 213) 0%, rgba(255, 245, 213, 0.605) 13%, rgba(252,70,70,0) 20%);
     /* background: radial-gradient(circle, 
         rgba(255,255,255,1) 0%, 
         rgba(255,255,255,1) 25%, 
@@ -18,4 +19,3 @@
         rgba(77,158,81,1) 72%, 
         rgba(37,74,40,0.9360119047619048) 100%); */
 }
-

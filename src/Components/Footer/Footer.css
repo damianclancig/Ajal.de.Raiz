@@ -1,7 +1,10 @@
 footer {
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
+    background-image: linear-gradient(to top, #b46c00 0%, #917f45 100%);
+    background-image: url("../../img/footer.png");
+    background-position: left bottom;
+    background-size: auto 100%;
     color: white;
 }
 

@@ -1,0 +1,33 @@
+.container-btn-mode{
+    display: flex;
+    position: absolute;
+    top:8px;
+    right: 8px;
+    cursor: pointer;
+    z-index: 2;
+    font-size:0;
+  }
+  .btn-mode{
+    display: inline-block;
+    width: 30px;
+    height: 25px;
+    border:2px solid black;
+    transition: background-color .5s;
+  }
+  .btn-mode {
+    display: block;
+    font-size: 15px;
+    text-align: center;
+    line-height: 25px;
+  }
+  .btn-mode.sun {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-right: 1px solid transparent;
+    background-color:  var(--sun-color);
+  }
+  .btn-mode.moon {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color:  var(--moon-color);
+  }
