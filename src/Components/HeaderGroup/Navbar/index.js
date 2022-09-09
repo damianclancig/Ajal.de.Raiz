@@ -12,7 +12,7 @@ function Navbar(prop) {
 
     return (
         <nav className='push-left'>
-            <div className="menu">
+            <div className="boton menu">
                 <FontAwesomeIcon icon={faBars} className="menu-icon" onClick={toggleNav} />
             </div>
             {(toggleMenu) && (

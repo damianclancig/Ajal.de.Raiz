@@ -5,7 +5,7 @@ import './ShopCart.css'
 
 function ShopCart() {
     return (
-        <div className="carrito">
+        <div className="boton carrito">
             <FontAwesomeIcon icon={faCartShopping} className="cart-icon" />
         </div>
     );

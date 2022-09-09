@@ -1,6 +1,6 @@
-import Header from './Components/Header/Header'
-import Content from './Components/Content/Content'
-import Footer from './Components/Footer/Footer'
+import Header from './Components/HeaderGroup/Header'
+import Content from './Components/ContentGroup'
+import Footer from './Components/FooterGroup'
 
 import './App.css'
 function App() {
@@ -14,4 +14,3 @@ function App() {
 }
 
 export default App;
-

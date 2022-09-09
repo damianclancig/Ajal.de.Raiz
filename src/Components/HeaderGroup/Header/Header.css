@@ -1,0 +1,16 @@
+.titulo {
+    font-size: 30px;
+    text-align: center;
+    height: 60px;
+    color: #d46f37;
+}
+
+.gridLogo {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.logo {
+    text-align: center;
+    background: radial-gradient(circle, rgb(255, 247, 213) 0%, rgba(255, 245, 213, 0.605) 50%, rgba(252,70,70,0) 60%);
+}

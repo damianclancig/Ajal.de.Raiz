@@ -25,10 +25,10 @@ const Search = () => {
       <Form
         className={
           search === false
-            ? "searchbar fadeOutWidth"
+            ? "boton searchbar fadeOutWidth"
             : search === true
-            ? "searchbar fadeInWidth"
-            : "searchbar"
+            ? "boton searchbar fadeInWidth"
+            : "boton searchbar"
         }
       >
         {search === true && (

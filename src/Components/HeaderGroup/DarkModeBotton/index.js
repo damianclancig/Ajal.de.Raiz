@@ -37,11 +37,11 @@ function DarkModeBotton() {
 
     return (
         <div >
-            <div class="container-btn-mode" onClick={() => toggleThemeChange()} >
-                <div id="id-sun" class="btn-mode sun">
+            <div className="container-btn-mode" onClick={() => toggleThemeChange()} >
+                <div id="id-sun" className="btn-mode sun">
                     <FontAwesomeIcon icon={faSun} />
                 </div>
-                <div id="id-moon" class="btn-mode moon">
+                <div id="id-moon" className="btn-mode moon">
                     <FontAwesomeIcon icon={faMoon} />
                 </div>
             </div>
