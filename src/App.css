@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    color:white;
+    color:var(--color);
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -9,14 +9,18 @@
 html {
     --sun-color: #07203d;
     --moon-color: #d46f37;
-    --secondary-color: linear-gradient(0deg, #d46f37 0%, #07203d 100%);
+    --color: white;
+    --secondary-color: linear-gradient(0deg, #a5572d 0%, #07203d 50%, #07203d 100%);
+    --backgroundList: rgba(255, 255, 255, 0.281);
 }
 
 /* Variables de color si el tema es dark */
 html[data-theme="dark"] {
     --sun-color: #d46f37;
     --moon-color: #07203d;
-    --secondary-color: linear-gradient(0deg, #07203d 0%, #d46f37 100%);
+    --color: black;
+    --secondary-color: linear-gradient(0deg, #a5572d 0%, #b8edfa 50%, #b8edfa 100%);
+    --backgroundList: rgba(77, 77, 77, 0.281);
 }
 
 #root {
