@@ -1,5 +1,5 @@
 import Header from './Components/HeaderGroup/Header'
-import Content from './Components/ContentGroup'
+import Content from './Components/ContentGroup/ListProducts'
 import Footer from './Components/FooterGroup'
 
 import './App.css'

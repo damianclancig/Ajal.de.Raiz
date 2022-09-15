@@ -31,7 +31,7 @@ html[data-theme="dark"] {
     text-align: center;
     transition: background-position 0.5s ease;
     color: white;
-    font-size: 15px;
+    font-size: 25px;
 }
 
 .boton:hover {

@@ -1,0 +1,17 @@
+.listaProductos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-left: 110px;
+    margin-right: 110px;
+}
+
+@media only screen and (max-device-width: 480px) {
+    .listaProductos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
