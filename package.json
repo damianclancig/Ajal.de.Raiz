@@ -1,6 +1,6 @@
 {
   "name": "ajal.de.raiz.tienda",
-  "version": "0.5.0",
+  "version": "0.7.0",
   "private": true,
   "homepage": "https://damianclancig.github.io/Ajal.de.Raiz",
   "dependencies": {
@@ -16,7 +16,8 @@
     "react-cool-onclickoutside": "1.5.8",
     "react-dom": "^18.2.0",
     "react-fontawesome": "1.7.1",
-    "react-router-dom": "^6.3.0",
+    "react-responsive-carousel": "^3.2.23",
+    "react-router-dom": "^6.4.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -36,7 +37,7 @@
   },
   "browserslist": {
     "production": [
-      ">0.2%",
+      ">10%",
       "not dead",
       "not op_mini all"
     ],

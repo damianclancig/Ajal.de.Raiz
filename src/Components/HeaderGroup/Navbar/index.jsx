@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
@@ -6,7 +7,7 @@ import './Navbar.css'
 
 function Navbar(prop) {
     const [toggleMenu, setToggleMenu] = useState(false)
-
+    
     const toggleNav = () => {
         setToggleMenu(!toggleMenu);
     }
@@ -24,10 +25,10 @@ function Navbar(prop) {
                 </div>
             )}
             <ul className={`list ${!!toggleMenu ? "active" : "inactive"}`}>
-                <li className="items">Inicio</li>
-                <li className="items">Productos</li>
-                <li className="items">Acerca de nosotros</li>
-                <li className="items">Contacto</li>
+                <li className="items" onClick={toggleNav}><Link to='/'>Inicio</Link></li>
+                <li className="items" onClick={toggleNav}><Link to='/tienda'>Tienda</Link></li>
+                <li className="items" onClick={toggleNav}><Link to='/acercade'>Acerca de nosotros</Link></li>
+                <li className="items" onClick={toggleNav}><Link to='/contacto'>Contacto</Link></li>
             </ul>
         
 
