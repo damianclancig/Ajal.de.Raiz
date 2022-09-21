@@ -6,17 +6,17 @@ import imagenProd from '../../../img/productos/monstera.jpg'
 import './Producto.css'
 
 const handleDetailProduct = () => {
-    alert("detalle");
+    
 }
 
-function Producto () {
+function Producto (props) {
     return (
         <div className='cuadroProducto'>
             <div className="producto" title="Ver producto" onClick={handleDetailProduct}>
                 <span><img className="imagenProducto" src={imagenProd} alt="producto test" /></span>
                 <div className="">
-                    <span className="nombreProducto" ><h4>Monstera Nro. 6</h4></span>
-                    <p>Precio: $ 10</p>
+                    <span className="nombreProducto" ><h4>{props.title}</h4></span>
+                    <p>Precio: $ {props.price}</p>
                     <p>Stock: 20</p>
                     <div className="row">
                         <span className="">Ver más</span>
