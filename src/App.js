@@ -7,11 +7,12 @@ import {
 import './FirestoreConfig'
 
 import Header from './Components/HeaderGroup/Header'
-import ListProducts from './Components/ContentGroup/ListProducts'
 import Home from './Components/ContentGroup/Home';
-import Footer from './Components/FooterGroup'
+import ListProducts from './Components/ContentGroup/ListProducts'
 import AcercaDe from './Components/ContentGroup/AcercaDe';
 import Contacto from './Components/ContentGroup/Contacto';
+import Administration from './Components/ContentGroup/Administration';
+import Footer from './Components/FooterGroup'
 
 import './App.css'
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/tienda" element={<ListProducts />} />
         <Route path="/acercade" element={<AcercaDe />} />
         <Route path="/contacto" element={<Contacto />} />
+        <Route path="/administracion" element={<Administration />} />
       </Routes>
       <Footer />
     </>
