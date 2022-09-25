@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Ajal.de.Raiz/static/css/main.b49c13bb.css",
-    "main.js": "/Ajal.de.Raiz/static/js/main.1a5d943b.js",
+    "main.css": "/Ajal.de.Raiz/static/css/main.bf051467.css",
+    "main.js": "/Ajal.de.Raiz/static/js/main.ce5861af.js",
     "static/js/787.70d46a09.chunk.js": "/Ajal.de.Raiz/static/js/787.70d46a09.chunk.js",
     "static/media/footer.png": "/Ajal.de.Raiz/static/media/footer.aa78e8830fead08f50ef.png",
     "static/media/carousel2.jpg": "/Ajal.de.Raiz/static/media/carousel2.1aacf48f929776b8bad3.jpg",
@@ -16,12 +16,12 @@
     "static/media/monstera.jpg": "/Ajal.de.Raiz/static/media/monstera.30591cef1d6859e8d739.jpg",
     "static/media/instagram-icon.png": "/Ajal.de.Raiz/static/media/instagram-icon.58955feeb48f5569f204.png",
     "index.html": "/Ajal.de.Raiz/index.html",
-    "main.b49c13bb.css.map": "/Ajal.de.Raiz/static/css/main.b49c13bb.css.map",
-    "main.1a5d943b.js.map": "/Ajal.de.Raiz/static/js/main.1a5d943b.js.map",
+    "main.bf051467.css.map": "/Ajal.de.Raiz/static/css/main.bf051467.css.map",
+    "main.ce5861af.js.map": "/Ajal.de.Raiz/static/js/main.ce5861af.js.map",
     "787.70d46a09.chunk.js.map": "/Ajal.de.Raiz/static/js/787.70d46a09.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b49c13bb.css",
-    "static/js/main.1a5d943b.js"
+    "static/css/main.bf051467.css",
+    "static/js/main.ce5861af.js"
   ]
 }
