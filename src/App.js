@@ -4,11 +4,9 @@ import {
   Route
 } from 'react-router-dom';
 
-import './FirestoreConfig'
-
 import Header from './Components/HeaderGroup/Header'
 import Home from './Components/ContentGroup/Home';
-import ListProducts from './Components/ContentGroup/ListProducts'
+import ListProducts from './Components/ContentGroup/ProductsList'
 import AcercaDe from './Components/ContentGroup/AcercaDe';
 import Contacto from './Components/ContentGroup/Contacto';
 import Administration from './Components/ContentGroup/Administration';

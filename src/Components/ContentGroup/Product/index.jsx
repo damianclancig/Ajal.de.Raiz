@@ -1,25 +1,26 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 
-import imagenProd from '../../../img/productos/monstera.jpg'
-
-import './Producto.css'
+import './Product.css'
 
 const handleDetailProduct = () => {
     
 }
+const imagePath = '../../../img/productos/';
 
 function Producto (props) {
+    const product = props.product;
     return (
         <div className='cuadroProducto'>
             <div className="producto" title="Ver producto" onClick={handleDetailProduct}>
-                <span><img className="imagenProducto" src={imagenProd} alt="producto test" /></span>
+                <span><img className="imagenProducto" src={imagePath + product.image} alt="producto test" /></span>
                 <div className="">
-                    <span className="nombreProducto" ><h4>{props.title}</h4></span>
-                    <p>Precio: $ {props.price}</p>
-                    <p>Stock: 20</p>
+                    <h3>{product.title}</h3>
+                    <p>{product.description}</p>
+                    <p>Precio: $ {product.price}</p>
+                    <p>Stock: {product.stock}</p>
                     <div className="row">
-                        <span className="">Ver más</span>
+                        {/* <span className="">Ver más</span> */}
                         <div className="">
                             <button className="btnAddCart">Add <FontAwesomeIcon icon={faCartShopping} className="cartIcon" /></button>
                         </div>
