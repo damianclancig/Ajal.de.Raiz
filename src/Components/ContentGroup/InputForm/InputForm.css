@@ -1,0 +1,63 @@
+.input-container {
+    height: 30px;
+    position: relative;
+    width: 100%;
+}
+
+.ic1 {
+    margin-top: 20px;
+}
+
+.input {
+    background: rgba(194, 194, 194, 0.1);
+    border-radius: 12px;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    color: var(--color);
+    font-size: 18px;
+    height: 100%;
+    outline: 0;
+    padding: 4px 15px 0;
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+}
+
+.input:hover {
+    background: rgba(194, 194, 194, 0.2);
+
+}
+
+.placeholder {
+    color: #c7c7c7;
+    font-family: sans-serif;
+    left: 15px;
+    line-height: 14px;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    top: 10px;
+}
+
+.input:focus~.placeholder,
+.input:not(:placeholder-shown)~.placeholder {
+    transform: translateY(-25px) translateX(-2px) scale(0.75);
+}
+
+.input:not(:placeholder-shown)~.placeholder {
+    color: #9e9e9e;
+}
+
+.input:focus~.placeholder {
+    font-weight: bold;
+    color: #c4c4c4;
+}
+
+.input_requerido {
+    color: #ffa1a1;
+    font-size: 12px;
+}

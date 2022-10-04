@@ -1,6 +1,5 @@
 import React, { useState } from "react"
-
-import { Nav, Form } from "react-bootstrap"
+// import { AppContext } from "../../../context/AppContext"
 import useOnclickOutside from "react-cool-onclickoutside"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSearch } from "@fortawesome/free-solid-svg-icons"
@@ -8,69 +7,67 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons"
 import './Search.css'
 
 const Search = () => {
-  const [search, setSearch] = useState()
+
+  // const { searchValue, setSearchValue } = useContext(AppContext);
+  const [searchValue, setSearchValue] = useState('')
+
+  const [searchView, setSearchView] = useState()
 
   const toggle = () => {
-    setSearch(true)
+    setSearchView(true)
   }
 
-  const closeSearch = () => (search === true ? setSearch(false) : null)
+  const closeSearch = () => (searchView === true ? setSearchView(false) : null)
 
   const ref = useOnclickOutside(() => {
     closeSearch()
   })
 
+  const onSeachValueChange = (event) => {
+    setSearchValue(event.target.value);
+  }
+
+  const handleSubmit = event => {
+    event.preventDefault();
+    console.log(searchValue);
+    
+    closeSearch()
+  };
+
   return (
-    <Nav className="my-auto" ref={ref}>
-      <Form
+    <>
+      <form onSubmit={handleSubmit}
         className={
-          search === false
+          searchView === false
             ? "boton searchbar fadeOutWidth"
-            : search === true
-            ? "boton searchbar fadeInWidth"
-            : "boton searchbar"
+            : searchView === true
+              ? "boton searchbar fadeInWidth"
+              : "boton searchbar"
         }
       >
-        {search === true && (
+        {searchView === true && (
           <input
+            id="inputSearchText"
             ref={ref}
-            className={
-              search === true
-                ? "search-input fadeIn"
-                : search === false
-                ? "search-input fadeOut"
-                : "search-input"
-            }
+            className="search-input"
             type="text"
             name=""
-            placeholder="Search..."
+            value={searchValue}
+            placeholder="Buscar productos..."
+            onChange={onSeachValueChange} 
           />
         )}
-        <div
-          className={
-            search === true
-              ? "icon-bg fadeOut"
-              : search === false
-              ? "icon-bg fadeIn"
-              : "icon-bg"
-          }
-        >
-          {search !== true && (
-            <FontAwesomeIcon
-              onClick={toggle}
-              className={
-                search === true
-                  ? "search-icon fadeOut"
-                  : search === false
-                  ? "search-icon fadeIn"
-                  : "search-icon"
-              }
-              icon={faSearch}
-            />
-          )}
+        <div className="icon-bg">
+
+          <FontAwesomeIcon
+            onClick={toggle}
+            className="search-icon"
+            icon={faSearch}
+          />
         </div>
-      </Form>
-    </Nav>
+      </form>
+    </>
+
   )
 }
 

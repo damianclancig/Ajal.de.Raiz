@@ -13,12 +13,12 @@
     animation: 0.2s linear fadeOutWidth;
   }
   
-  .fadeIn {
+  /* .fadeIn {
     animation: 0.8s linear fadeIn;
   }
   .fadeOut {
     animation: 1s linear fadeOut;
-  }
+  } */
   
   .search-input {
     color: white;

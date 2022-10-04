@@ -1,0 +1,193 @@
+.button-div {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.button-add {
+    width: 100px;
+    height: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    background: rgb(24, 53, 77);
+    margin-top: 20px;
+}
+
+.button-add,
+.button-add span {
+    transition: 200ms;
+}
+
+.button-add .text {
+    transform: translateX(10px);
+    color: white;
+    font-weight: bold;
+}
+
+.button-add .icon {
+    position: absolute;
+    border-left: 1px solid #757575;
+    transform: translateX(70px);
+    height: 25px;
+    width: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-add svg {
+    width: 15px;
+    fill: #eee;
+}
+
+.button-add:hover {
+    background: rgb(53, 76, 95);
+}
+
+.button-add:hover .text {
+    color: transparent;
+}
+
+.button-add:hover .icon {
+    width: 100px;
+    border-left: none;
+    transform: translateX(0);
+}
+
+.button-add:focus {
+    outline: none;
+}
+
+.button-add:active .icon svg {
+    transform: scale(0.8);
+}
+
+.plus-icon {
+    font-size: 20px;
+}
+
+.button-edit {
+    width: 85px;
+    height: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    background: rgb(24, 53, 77);
+    margin-right: 20px;
+}
+
+.button-edit,
+.button-edit span {
+    transition: 200ms;
+}
+
+.button-edit .text {
+    transform: translateX(10px);
+    color: white;
+    font-weight: bold;
+}
+
+.button-edit .icon {
+    position: absolute;
+    border-left: 1px solid #757575;
+    transform: translateX(58px);
+    height: 25px;
+    width: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-edit svg {
+    width: 15px;
+    fill: #eee;
+}
+
+.button-edit:hover {
+    background: rgb(53, 76, 95);
+}
+
+.button-edit:hover .text {
+    color: transparent;
+}
+
+.button-edit:hover .icon {
+    width: 85px;
+    border-left: none;
+    transform: translateX(0);
+}
+
+.button-edit:focus {
+    outline: none;
+}
+
+.button-edit:active .icon svg {
+    transform: scale(0.8);
+}
+
+.button-delete {
+    width: 100px;
+    height: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    background: #e62222;
+}
+
+.button-delete,
+.button-delete span {
+    transition: 200ms;
+}
+
+.button-delete .text {
+    transform: translateX(10px);
+    color: white;
+    font-weight: bold;
+}
+
+.button-delete .icon {
+    position: absolute;
+    border-left: 1px solid #b64545;
+    transform: translateX(75px);
+    height: 25px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-delete svg {
+    width: 15px;
+    fill: #eee;
+}
+
+.button-delete:hover {
+    background: #fa5e5e;
+}
+
+.button-delete:hover .text {
+    color: transparent;
+}
+
+.button-delete:hover .icon {
+    width: 100px;
+    border-left: none;
+    transform: translateX(0);
+}
+
+.button-delete:focus {
+    outline: none;
+}
+
+.button-delete:active .icon svg {
+    transform: scale(0.8);
+}

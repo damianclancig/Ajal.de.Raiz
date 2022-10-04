@@ -3,10 +3,10 @@ import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./Home.css"
 
-import carouselFoto from '../../../img/carousel/carousel1.jpg';
-import carouselFoto2 from '../../../img/carousel/carousel2.jpg';
-import carouselFoto3 from '../../../img/carousel/carousel3.jpg';
-import carouselFoto4 from '../../../img/carousel/carousel4.jpg';
+import carouselFoto from '../../img/carousel/carousel1.jpg';
+import carouselFoto2 from '../../img/carousel/carousel2.jpg';
+import carouselFoto3 from '../../img/carousel/carousel3.jpg';
+import carouselFoto4 from '../../img/carousel/carousel4.jpg';
 
 function Home () {
     return (

@@ -30,7 +30,7 @@
  */
 .ramaLateral {
     position: absolute;
-    background: url("../../../img/RamaLateralDer.png") no-repeat;
+    background: url("../../img/RamaLateralDer.png") no-repeat;
     background-size: 250px auto;
     top: 90%;
     right: 0px;

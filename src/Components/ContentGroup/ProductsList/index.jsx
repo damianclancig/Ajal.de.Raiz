@@ -14,7 +14,7 @@ function Content() {
             <div className="listaProductos">
                 {
                     productsList.map((product, index) => {
-                        return <Producto key={index} product={product} />
+                        return <Producto key={'product_'+index} product={product} />
                     })
                 }
             </div>

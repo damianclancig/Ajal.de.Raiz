@@ -1,8 +1,8 @@
 
 import "./AcercaDe.css"
 
-import mini1 from "../../../img/mini1.jpg"
-import mini2 from "../../../img/mini2.jpg"
+import mini1 from "../../img/mini1.jpg"
+import mini2 from "../../img/mini2.jpg"
 
 function AcercaDe () {
     return (
