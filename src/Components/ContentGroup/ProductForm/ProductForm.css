@@ -5,7 +5,7 @@
 
 .productForm {
     background: rgba(255, 255, 255, 0.1);
-    box-shadow: 4 4px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 4px 4px 30px rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-left: 1px solid rgba(255, 255, 255, 0.3);
@@ -16,4 +16,40 @@
     width: 320px;
 }
 
+.buttonFormContent {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
 
+.input-container {
+    height: 30px;
+    position: relative;
+    width: 100%;
+}
+
+.ic1 {
+    margin-top: 20px;
+}
+
+.input-upload-file {
+    background: rgba(194, 194, 194, 0.1);
+    border-radius: 12px;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
+    color: var(--color);
+    font-size: 18px;
+    height: 100%;
+    outline: 0;
+    padding: 4px 15px 0;
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+}
+
+.input-upload-file:hover {
+    background: rgba(194, 194, 194, 0.2);
+}

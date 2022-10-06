@@ -1,0 +1,172 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    z-index: 100;
+}
+
+.modal-main {
+    position: fixed;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    box-sizing: border-box;
+    padding: 20px;
+    width: auto;
+    min-width: 300px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modalText {
+    margin: 0px 10px 20px 10px;
+}
+
+.modalButtons {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+
+.display-block {
+    display: block;
+}
+
+.display-none {
+    display: none;
+}
+
+.button-modal-accept {
+    width: 100px;
+    height: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    background: rgb(38, 112, 69);
+    margin-top: 20px;
+}
+
+.button-modal-accept,
+.button-modal-accept span {
+    transition: 200ms;
+}
+
+.button-modal-accept .text {
+    transform: translateX(10px);
+    color: white;
+    font-weight: bold;
+}
+
+.button-modal-accept .icon {
+    position: absolute;
+    border-left: 1px solid #757575;
+    transform: translateX(70px);
+    height: 25px;
+    width: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-modal-accept svg {
+    width: 15px;
+    fill: #eee;
+}
+
+.button-modal-accept:hover {
+    background: rgb(57, 160, 100);
+}
+
+.button-modal-accept:hover .text {
+    color: transparent;
+}
+
+.button-modal-accept:hover .icon {
+    width: 100px;
+    border-left: none;
+    transform: translateX(0);
+}
+
+.button-modal-accept:focus {
+    outline: none;
+}
+
+.button-modal-accept:active .icon svg {
+    transform: scale(0.8);
+}
+
+.button-modal-cancel {
+    width: 110px;
+    height: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    background: rgb(24, 53, 77);
+    margin-top: 20px;
+}
+
+.button-modal-cancel,
+.button-modal-cancel span {
+    transition: 200ms;
+}
+
+.button-modal-cancel .text {
+    transform: translateX(10px);
+    color: white;
+    font-weight: bold;
+}
+
+.button-modal-cancel .icon {
+    position: absolute;
+    border-left: 1px solid #757575;
+    transform: translateX(80px);
+    height: 25px;
+    width: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-modal-cancel svg {
+    width: 15px;
+    fill: #eee;
+}
+
+.button-modal-cancel:hover {
+    background: rgb(53, 76, 95);
+}
+
+.button-modal-cancel:hover .text {
+    color: transparent;
+}
+
+.button-modal-cancel:hover .icon {
+    width: 110px;
+    border-left: none;
+    transform: translateX(0);
+}
+
+.button-modal-cancel:focus {
+    outline: none;
+}
+
+.button-modal-cancel:active .icon svg {
+    transform: scale(0.8);
+}

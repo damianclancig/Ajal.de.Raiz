@@ -1,20 +1,19 @@
 import React from 'react';
-import { useFirestore } from '../../../FirestoreConfig/useFirestore';
-
+import { AppContext } from '../../../context/AppContext';
 import Producto from '../Product'
+import Loading from '../Loading';
 
 import "./productList.css";
 
 function Content() {
-    const [productsList, loading] = useFirestore('products');
-    
+    const { productsList } = React.useContext(AppContext);
     return (
         <>
-            {loading?<h2>Cargando ...</h2>:''}
+            <Loading />
             <div className="listaProductos">
                 {
                     productsList.map((product, index) => {
-                        return <Producto key={'product_'+index} product={product} />
+                        return <Producto key={'product_' + index} product={product} />
                     })
                 }
             </div>

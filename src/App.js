@@ -1,6 +1,5 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-// import { AppProvider } from './context/AppContext';
 
 import Header from './Components/HeaderGroup/Header'
 import Home from './pages/Home';
@@ -14,17 +13,15 @@ import './App.css'
 function App() {
   return (
     <>
-      {/* <AppProvider> */}
-        <Header />
-        <Routes>
-          <Route path="/" exact element={<Home />} />
-          <Route path="/tienda" element={<ListProducts />} />
-          <Route path="/acercade" element={<AcercaDe />} />
-          <Route path="/contacto" element={<Contacto />} />
-          <Route path="/administracion" element={<Administration />} />
-        </Routes>
-        <Footer />
-      {/* </AppProvider> */}
+      <Header />
+      <Routes>
+        <Route path="/" exact element={<Home />} />
+        <Route path="/tienda" element={<ListProducts />} />
+        <Route path="/acercade" element={<AcercaDe />} />
+        <Route path="/contacto" element={<Contacto />} />
+        <Route path="/administracion" element={<Administration />} />
+      </Routes>
+      <Footer />
     </>
   );
 }

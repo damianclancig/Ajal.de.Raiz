@@ -1,21 +1,24 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './Button.css'
-const Button = ( {buttonClass, buttonIcon, children, handleClick, idProd} ) => {
+const Button = ({ buttonClass, buttonIcon, children, handleClick, prod }) => {
 
     const onClick = () => {
-        if(handleClick){
-            handleClick(idProd)
+        if (handleClick) {
+            handleClick(prod)
         }
     }
 
     return (
         <div>
-            <button className={"noselect " + buttonClass} onClick={onClick} id={idProd}>
+            <button className={"noselect button-transition button-bkHover button-colorTransparent " + buttonClass} onClick={onClick} id={prod}>
                 <span className="text">{children}</span>
-                <span className="icon">
-                    <FontAwesomeIcon icon={buttonIcon} className="plus-icon" />
-                </span>
+                {buttonIcon ?
+                    <span className="icon">
+                        <FontAwesomeIcon icon={buttonIcon} className="plus-icon" />
+                    </span>
+                    : ''
+                }
             </button>
         </div>
     )

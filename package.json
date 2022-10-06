@@ -1,6 +1,6 @@
 {
   "name": "ajal.de.raiz.tienda",
-  "version": "0.7.0",
+  "version": "0.50.0",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",

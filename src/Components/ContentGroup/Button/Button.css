@@ -131,6 +131,130 @@
     transform: scale(0.8);
 }
 
+.button-acceptEdit {
+    width: 100px;
+    height: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    background: rgb(38, 112, 69);
+    margin-top: 20px;
+}
+
+.button-acceptEdit,
+.button-acceptEdit span {
+    transition: 200ms;
+}
+
+.button-acceptEdit .text {
+    transform: translateX(10px);
+    color: white;
+    font-weight: bold;
+}
+
+.button-acceptEdit .icon {
+    position: absolute;
+    border-left: 1px solid #757575;
+    transform: translateX(70px);
+    height: 25px;
+    width: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-acceptEdit svg {
+    width: 15px;
+    fill: #eee;
+}
+
+.button-acceptEdit:hover {
+    background: rgb(57, 160, 100);
+}
+
+.button-acceptEdit:hover .text {
+    color: transparent;
+}
+
+.button-acceptEdit:hover .icon {
+    width: 100px;
+    border-left: none;
+    transform: translateX(0);
+}
+
+.button-acceptEdit:focus {
+    outline: none;
+}
+
+.button-acceptEdit:active .icon svg {
+    transform: scale(0.8);
+}
+
+.button-cancel {
+    width: 110px;
+    height: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    background: rgb(24, 53, 77);
+    margin-top: 20px;
+}
+
+.button-cancel,
+.button-cancel span {
+    transition: 200ms;
+}
+
+.button-cancel .text {
+    transform: translateX(10px);
+    color: white;
+    font-weight: bold;
+}
+
+.button-cancel .icon {
+    position: absolute;
+    border-left: 1px solid #757575;
+    transform: translateX(80px);
+    height: 25px;
+    width: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-cancel svg {
+    width: 25px;
+    fill: #eee;
+}
+
+.button-cancel:hover {
+    background: rgb(53, 76, 95);
+}
+
+.button-cancel:hover .text {
+    color: transparent;
+}
+
+.button-cancel:hover .icon {
+    width: 110px;
+    border-left: none;
+    transform: translateX(0);
+}
+
+.button-cancel:focus {
+    outline: none;
+}
+
+.button-cancel:active .icon svg {
+    transform: scale(0.8);
+}
+
 .button-delete {
     width: 100px;
     height: 25px;

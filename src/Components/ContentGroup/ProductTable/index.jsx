@@ -1,18 +1,21 @@
 import React, { useState } from 'react';
-import { useFirestore } from '../../../FirestoreConfig/useFirestore';
-
-import { faTrash, faPen } from '@fortawesome/free-solid-svg-icons'
+import { AppContext } from '../../../context/AppContext';
+import { deleteProduct } from '../../../FirestoreConfig/apiFirebase';
 import Button from '../Button';
 import InputForm from '../InputForm';
+import Loading from '../Loading';
+import Modal from '../Modal';
+
+import { faTrash, faPen } from '@fortawesome/free-solid-svg-icons'
 import './ProductTable.css'
 
-const ProductTable = ({ onDelete }) => {
-    const [productsList, loading] = useFirestore('products');
+const ProductTable = () => {
+    const { initialModalState, productsList, loadProducts, productForm, setProductForm, setIsEditProd } = React.useContext(AppContext);
+
+    const [modalState, setModalState] = useState(initialModalState);
 
     const [searchValue, setSearchValue] = useState('');
-
     let searchedProducts = [];
-
     if (!searchValue.length >= 1) {
         searchedProducts = productsList;
     }
@@ -25,50 +28,89 @@ const ProductTable = ({ onDelete }) => {
         });
     }
 
+    const showModal = () => {
+        setModalState({ show: true });
+    };
+
+    const hideModal = () => {
+        setModalState({ show: false });
+    };
+
     const onSeachValueChange = (event) => {
         setSearchValue(event.target.value);
+    }
+
+    const confirmDelete = (product) => {
+        setProductForm(product)
+        showModal();
+    }
+
+    const onDelete = () => {
+        deleteProduct(productForm.id)
+        hideModal()
+        loadProducts()
+    }
+
+    const onEdit = (prod) => {
+        setIsEditProd(true);
+        setProductForm(prod);
     }
 
     return (
         <>
             <div className="container">
-                {loading ? <h2>Cargando ...</h2> : ''}
-                <InputForm id='searchProd' text='Buscar producto' onChange={onSeachValueChange} />
-                <table className="styled-table">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Titulo</th>
-                            <th>Descripción</th>
-                            <th>Precio</th>
-                            <th>Stock</th>
-                            <th>Imagen</th>
-                            <th className='lastColumn'>Acción</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            searchedProducts.map((product, index) => {
-                                console.log('product', product)
-                                return (
-                                    <tr key={'prod_' + index}>
-                                        <td>{index}</td>
-                                        <td>{product.title}</td>
-                                        <td>{product.description}</td>
-                                        <td>{product.price}</td>
-                                        <td>{product.stock}</td>
-                                        <td>{product.image}</td>
-                                        <td className='lastColumn'>
-                                            <Button buttonClass="button-delete" buttonIcon={faTrash} handleClick={onDelete} idProd={product.id} >Eliminar</Button>
-                                            <Button buttonClass="button-edit" buttonIcon={faPen} >Editar</Button>
-                                        </td>
-                                    </tr>
-                                )
-                            })
-                        }
-                    </tbody>
-                </table>
+                <Loading />
+
+                {searchedProducts.length === 0 ? 'No hay productos cargados' :
+                    <>
+                        <InputForm id='searchProd' text='Buscar producto' onChange={onSeachValueChange} />
+                        <table className="styled-table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Titulo</th>
+                                    <th>Descripción</th>
+                                    <th>Precio</th>
+                                    <th>Stock</th>
+                                    <th>Imagen</th>
+                                    <th className='lastColumn'>Acción</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {
+                                    searchedProducts.map((product, index) => {
+                                        console.log('product', product)
+                                        return (
+                                            <tr key={'prod_' + index}>
+                                                <td>{index}</td>
+                                                <td>{product.title}</td>
+                                                <td>{product.description}</td>
+                                                <td>{product.price}</td>
+                                                <td>{product.stock}</td>
+                                                <td>
+                                                    <span class="mytooltip tooltip-effect-1">
+                                                        <span class="tooltip-item">Ver imagen</span>
+                                                        <span class="tooltip-content clearfix">
+                                                            <img alt={product.title} src={product.image} />
+                                                        </span>
+                                                    </span>
+                                                </td>
+                                                <td className='lastColumn'>
+                                                    <Button buttonClass="button-delete" buttonIcon={faTrash} handleClick={confirmDelete} prod={product} >Eliminar</Button>
+                                                    <Button buttonClass="button-edit" buttonIcon={faPen} handleClick={onEdit} prod={product} >Editar</Button>
+                                                </td>
+                                            </tr>
+                                        )
+                                    })
+                                }
+                            </tbody>
+                        </table>
+                    </>
+                }
             </div>
+            <Modal show={modalState.show} handleAccept={onDelete} handleClose={hideModal}>
+                <p>¿Está seguro que desea eliminar?</p>
+            </Modal>
         </>
     )
 }
