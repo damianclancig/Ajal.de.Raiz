@@ -1,5 +1,5 @@
 import { db } from './useFirebase'
-import { collection, getDocs, getDoc, doc, addDoc, deleteDoc, updateDoc } from 'firebase/firestore'
+import { collection, getDocs, doc, addDoc, deleteDoc, updateDoc } from 'firebase/firestore'
 
 const getAllProducts = () => {
     getDocs(collection(db, 'products'))
