@@ -1,0 +1,39 @@
+.panelAcercaDe {
+    margin: 0 15% 0 15%;
+    font-size: 25px;
+    position: relative;
+}
+
+.panelAcercaDe p {
+    padding-bottom: 40px;
+    z-index: 2;
+}
+
+.minis img {
+    padding: 0 20px 10px 10px;
+}
+
+/* .logoCentral {
+    position: absolute;
+    background: url("../../../img/Logo.png") no-repeat;
+    background-size: 100% auto;
+    width: 50%;
+    height: 100%;
+
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+ */
+.ramaLateral {
+    position: absolute;
+    background: url("../../img/RamaLateralDer.png") no-repeat;
+    background-size: 250px auto;
+    top: 90%;
+    right: 0px;
+    width: 250px;
+    height: 525px;
+}

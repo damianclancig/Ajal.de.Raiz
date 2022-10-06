@@ -1,0 +1,105 @@
+.cuadroProducto {
+    width: 240px;
+    height: 350px;
+}
+
+.producto {
+    width: 180px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    backdrop-filter: blur(4.1px);
+    -webkit-backdrop-filter: blur(4.1px);
+    transition: background-color 0.5s ease,
+                width 0.5s ease,
+                box-shadow 0.5s ease;
+}
+
+.producto:hover {
+    width: 190px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 14px 28px, rgba(0, 0, 0, 0.5) 0px 10px 10px;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.imagenProducto {
+    width: 180px;
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
+
+.producto:hover .imagenProducto {
+    width: 190px;
+}
+
+.btnAddCart {
+  margin: 5px;
+  padding: 5px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: opacity 0.5s ease,
+              background-position 0.5s ease;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #f09819;
+  background-image: linear-gradient(45deg, #ff522fDD 0%, #f09619DD  51%, #FF512FDD  100%);
+  opacity: 0.2;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btnAddCart:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.producto:hover .btnAddCart {
+    opacity: 1;
+}
+
+.btnAddCart:active {
+  transform: scale(0.95);
+}
+
+@media only screen and (max-device-width: 480px) {
+    .cuadroProducto {
+        width: 180px;
+        height: 310px;
+    }
+    .producto {
+        width: 150px;
+        margin: 0 auto;
+        padding: 5px;
+        background: rgba(231, 255, 255, 0.2);
+        border-radius: 10px;
+    }
+            
+    .imagenProducto {
+        width: 150px;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
+    
+    .producto:hover {
+        width: 160px;
+    }
+    
+    .producto:hover .imagenProducto {
+        width: 160px;
+    }
+
+}

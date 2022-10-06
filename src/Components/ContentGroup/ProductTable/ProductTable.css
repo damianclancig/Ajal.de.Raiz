@@ -1,0 +1,163 @@
+.container {
+    display: flex;
+    margin: 0 3rem 0 3rem;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.loading {
+    position: fixed;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    box-sizing: border-box;
+    padding: 20px;
+    width: auto;
+    min-width: 300px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-device-width: 500px) {
+    .container {
+        display: flex;
+        margin: 0 0rem 0 0rem;
+        flex-wrap: wrap;
+        position: relative;
+        width: 100%;
+        overflow: auto;
+    }
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    text-shadow: 2px 2px 8px #000000;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+.styled-table thead tr {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 5px 10px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+    text-shadow: 2px 2px 8px #a5a5a5;
+}
+
+.styled-table tbody tr:hover {
+    background-color: rgb(112, 129, 150);
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: rgba(255, 255, 255, 0.4);
+    text-shadow: 2px 2px 8px #000000;
+}
+
+.styled-table tbody tr:nth-of-type(even):hover {
+    background-color: rgb(112, 129, 150);
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 1px solid #80808081;
+}
+
+.lastColumn {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.mytooltip {
+    display: inline;
+    position: relative;
+    z-index: 999
+}
+
+.mytooltip .tooltip-item {
+    background: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 500;
+    padding: 0 10px
+}
+
+.mytooltip .tooltip-content {
+    position: absolute;
+    z-index: 9999;
+    width: auto;
+    left: 50%;
+    margin: 0 0 10px -280px;
+    bottom: 100%;
+    text-align: left;
+    font-size: 14px;
+    line-height: 30px;
+    -webkit-box-shadow: -5px -5px 15px rgba(48, 54, 61, 0.2);
+    box-shadow: -5px -5px 15px rgba(48, 54, 61, 0.2);
+    background: #2b2b2b;
+    opacity: 0;
+    cursor: default;
+    pointer-events: none
+}
+
+.mytooltip .tooltip-content::after {
+    content: '';
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: #2a3035 transparent transparent;
+    border-width: 10px;
+    margin-left: -10px
+}
+
+.mytooltip .tooltip-content img {
+    position: relative;
+    height: 300px;
+    display: block;
+    float: left;
+}
+
+.mytooltip .tooltip-item::after {
+    content: '';
+    position: absolute;
+    width: 360px;
+    height: 20px;
+    bottom: 100%;
+    left: 50%;
+    pointer-events: none;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+
+.mytooltip:hover .tooltip-item::after {
+    pointer-events: auto
+}
+
+.mytooltip:hover .tooltip-content {
+    pointer-events: auto;
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0deg);
+    transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0deg)
+}
