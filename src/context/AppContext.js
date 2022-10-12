@@ -22,6 +22,8 @@ const ContextProvider = ({ children }) => {
 
     const [cart, setCart] = useState([]);
     const [isEditProd, setIsEditProd] = useState(false);
+    const [file, setFile] = useState('');
+
 
     const addToCart = (product) => {
         const productToAdd = {
@@ -48,7 +50,7 @@ const ContextProvider = ({ children }) => {
             cart, addToCart,
             productsList, loadProducts, loading,
             initialValueForm, productForm, setProductForm,
-            isEditProd, setIsEditProd,
+            isEditProd, setIsEditProd, file, setFile,
         }}>
             {children}
         </AppContext.Provider>

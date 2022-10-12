@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { AppContext } from '../../../context/AppContext';
 import { saveProduct, updateProduct } from '../../../FirestoreConfig/apiFirebase'
-
 
 import Button from '../Button';
 import InputForm from '../InputForm';
@@ -13,10 +12,9 @@ import Modal from '../Modal';
 
 const ProductForm = () => {
 
-    const { initialModalState, initialValueForm, loadProducts, productForm, setProductForm, isEditProd, setIsEditProd } = React.useContext(AppContext);
+    const { initialModalState, initialValueForm, loadProducts, productForm, setProductForm, isEditProd, setIsEditProd, setFile } = useContext(AppContext);
 
     const [modalState, setModalState] = useState(initialModalState);
-    const [file, setFile] = useState('');
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -70,7 +68,7 @@ const ProductForm = () => {
                     <InputForm id="description" text="Descripción" value={productForm.description} required={productForm.description_required} onChange={handleInputChange} />
                     <InputForm id="price" text="Precio" value={productForm.price} required={productForm.price_required} onChange={handleInputChange} />
                     <InputForm id="stock" text="Stock" value={productForm.stock} required={productForm.stock_required} onChange={handleInputChange} />
-                    <InputUploadImage file={file} setFile={setFile} />
+                    <InputUploadImage id="imageUpload" />
                     <div className="buttonFormContent">
                         {isEditProd ? (
                             <>

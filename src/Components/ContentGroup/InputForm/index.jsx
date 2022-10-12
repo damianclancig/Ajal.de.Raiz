@@ -10,12 +10,12 @@ const InpurForm = ({ id, text, value, required, onChange }) => {
     }
 
     return (
-        <div>
+        <>
             <div className='input-container ic1'>
                 <input id={id} name={id} value={value} className='input' type='text' placeholder=' ' onChange={onChange} />
                 <label htmlFor={id} className='placeholder'>{text} { showRequired() }</label>
             </div>
-        </div>
+        </>
     )
 }
 

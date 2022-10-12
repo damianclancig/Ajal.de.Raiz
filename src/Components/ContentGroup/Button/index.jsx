@@ -10,7 +10,7 @@ const Button = ({ buttonClass, buttonIcon, children, handleClick, prod }) => {
     }
 
     return (
-        <div>
+        <>
             <button className={"noselect button-transition button-bkHover button-colorTransparent " + buttonClass} onClick={onClick} id={prod}>
                 <span className="text">{children}</span>
                 {buttonIcon ?
@@ -20,7 +20,7 @@ const Button = ({ buttonClass, buttonIcon, children, handleClick, prod }) => {
                     : ''
                 }
             </button>
-        </div>
+        </>
     )
 }
 

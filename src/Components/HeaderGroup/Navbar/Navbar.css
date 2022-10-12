@@ -1,7 +1,6 @@
 .list {
     list-style-type: none;
     
-    /* From https://css.glass */
     background: var(--backgroundList);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
@@ -31,8 +30,16 @@
     margin-right: 20px;
     font-size: 20px;
     text-shadow: -3px 1px 13px rgba(0,0,0,1);
-    color: white;
     cursor: pointer;
+}
+
+.items a {
+    color: white;
+}
+
+.items a:hover {
+    text-shadow: 0px 1px 30px rgb(255, 255, 255);
+    font-weight: bold;
 }
 
 .menu {
@@ -55,7 +62,6 @@
 @media only screen and (max-device-width: 480px) {
     .list {
         list-style-type: none;
-        
         background: var(--backgroundList);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(10px);
@@ -68,8 +74,8 @@
         justify-content: center;
         align-items: center;
         z-index: 100;
-
         transition: all .40s ease;
+        margin-top: 0px;
     }
 
     .inactive {

@@ -2,22 +2,26 @@ import React, { useState } from 'react'
 import { storage } from "../../../FirestoreConfig/useFirebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { AppContext } from '../../../context/AppContext';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import Button from '../Button';
 
-import { faCloudArrowUp } from '@fortawesome/free-solid-svg-icons'
+import { faCloudArrowUp, faCheck } from '@fortawesome/free-solid-svg-icons'
+import './InputUploadImage.css'
 
-const InputUploadImage = (file, setFile) => {
+const InputUploadImage = (idUpload) => {
 
-    const { productForm, setProductForm } = React.useContext(AppContext);
-    
+    const { productForm, setProductForm, file, setFile } = React.useContext(AppContext);
+
     const [percent, setPercent] = useState(0);
+    const [fileUploaded, setFileUploaded] = useState(false);
 
     const handleChangeImage = (event) => {
         setFile(event.target.files[0]);
     }
 
     const handleUploadImage = () => {
+        setFileUploaded(false);
         if (!file) {
             alert("Please upload an image first!");
         }
@@ -37,6 +41,9 @@ const InputUploadImage = (file, setFile) => {
 
                 // update progress
                 setPercent(percent);
+                if(percent === 100) {
+                    setFileUploaded(true);
+                }
             },
             (err) => console.log(err),
             () => {
@@ -50,11 +57,19 @@ const InputUploadImage = (file, setFile) => {
 
     return (
         <>
-            <div className='input-container ic1'>
-                <input type="file" className='input-upload-file' onChange={handleChangeImage} accept="/image/*" />
-                <Button buttonClass="button-edit" buttonIcon={faCloudArrowUp} handleClick={handleUploadImage} >Subir</Button>
-                <p>{percent} "% done"</p>
+            <div className='input-file-container ic1'>
+                <input type="file" id={idUpload} className='input-upload-file-hidden' onChange={handleChangeImage} accept="/image/*" />
+                <label htmlFor={idUpload} className='input-upload-file'>Seleccionar Imagen</label>
+                <Button buttonClass="button-upload" buttonIcon={faCloudArrowUp} handleClick={handleUploadImage} >Subir</Button>
             </div>
+            {percent && percent < 100 ?
+                <span className='percentNumber'>{percent}% done</span>
+                : ""
+            }
+            {fileUploaded ?
+                <span className='percentNumber fadeOut'>Imagen cargado <FontAwesomeIcon icon={faCheck} className="plus-icon" /></span>
+                : ""
+            }
         </>
     )
 }

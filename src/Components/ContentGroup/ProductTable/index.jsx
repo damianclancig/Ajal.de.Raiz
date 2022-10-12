@@ -3,6 +3,7 @@ import { AppContext } from '../../../context/AppContext';
 import { deleteProduct } from '../../../FirestoreConfig/apiFirebase';
 import Button from '../Button';
 import InputForm from '../InputForm';
+import ToolTipImage from '../ToolTipImage';
 import Loading from '../Loading';
 import Modal from '../Modal';
 
@@ -87,14 +88,7 @@ const ProductTable = () => {
                                                 <td>{product.description}</td>
                                                 <td>{product.price}</td>
                                                 <td>{product.stock}</td>
-                                                <td>
-                                                    <span class="mytooltip tooltip-effect-1">
-                                                        <span class="tooltip-item">Ver imagen</span>
-                                                        <span class="tooltip-content clearfix">
-                                                            <img alt={product.title} src={product.image} />
-                                                        </span>
-                                                    </span>
-                                                </td>
+                                                <td><ToolTipImage product={product} /></td>
                                                 <td className='lastColumn'>
                                                     <Button buttonClass="button-delete" buttonIcon={faTrash} handleClick={confirmDelete} prod={product} >Eliminar</Button>
                                                     <Button buttonClass="button-edit" buttonIcon={faPen} handleClick={onEdit} prod={product} >Editar</Button>
