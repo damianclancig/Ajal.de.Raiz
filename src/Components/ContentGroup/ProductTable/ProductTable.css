@@ -5,25 +5,6 @@
     position: relative;
 }
 
-.loading {
-    position: fixed;
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-left: 1px solid rgba(255, 255, 255, 0.3);
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 16px;
-    box-sizing: border-box;
-    padding: 20px;
-    width: auto;
-    min-width: 300px;
-    height: auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 @media only screen and (max-device-width: 500px) {
     .container {
         display: flex;
@@ -40,17 +21,16 @@
     border-collapse: collapse;
     margin: 25px 0;
     font-size: 0.9em;
-    font-family: sans-serif;
     min-width: 400px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-    text-shadow: 2px 2px 8px #000000;
+    box-shadow: 0 0 20px var(--box-shadow-form);
+    text-shadow: 2px 2px 8px var(--color);
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
 }
 
 .styled-table thead tr {
-    background-color: rgba(255, 255, 255, 0.3);
-    color: #ffffff;
+    background-color: var(--row-even-color);
+    color: var(--color);
     text-align: left;
 }
 
@@ -61,7 +41,9 @@
 
 .styled-table tbody tr {
     border-bottom: 1px solid #dddddd;
-    text-shadow: 2px 2px 8px #a5a5a5;
+    text-shadow: 2px 2px 8px var(--colorForm);
+    background-color: var(--row-color);
+    color: var(--color);
 }
 
 .styled-table tbody tr:hover {
@@ -69,8 +51,8 @@
 }
 
 .styled-table tbody tr:nth-of-type(even) {
-    background-color: rgba(255, 255, 255, 0.4);
-    text-shadow: 2px 2px 8px #000000;
+    background-color: var(--row-even-color);
+    text-shadow: 2px 2px 8px var(--colorForm);
 }
 
 .styled-table tbody tr:nth-of-type(even):hover {

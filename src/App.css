@@ -5,7 +5,8 @@
 
 body {
     color:var(--color)!important;
-    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    font-family: 'Georgia Pro Light', 'Georgia', 'Times New Roman', Times, serif;
+    font-weight: normal;
 }
 
 /* Variables de color si el tema es nulo o light */
@@ -13,8 +14,22 @@ html {
     --sun-color: #07203d;
     --moon-color: #d46f37;
     --color: white;
+    --colorForm: #111111;
+    --color-required: #fc8989;
+    --color-placeholder: #b9b9b9;
+    --color-green: rgb(66, 240, 66);
     --secondary-color: linear-gradient(to top, #a5572d 0%, #07203d 50%, #07203d 100%);
     --backgroundList: rgba(255, 255, 255, 0.281);
+    --backgroundForm: rgba(255, 255, 255, 0.1);
+    --border-left: rgba(255, 255, 255, 0.1);
+    --border-right: rgba(255, 255, 255, 0.2);
+    --box-shadow-form: rgba(255, 255, 255, 0.2);
+    --box-shadow-product: rgba(255, 255, 255, 0.16);
+    --box-shadow-product-hover: rgba(255, 255, 255, 0.4);
+    --row-color: rgba(94, 94, 94, 0.2);
+    --row-even-color: rgba(44, 44, 44, 0.4);
+    --form-border-left: rgba(255, 255, 255, 0.1);
+    --form-border-right: rgba(255, 255, 255, 0.3);
 }
 
 /* Variables de color si el tema es dark */
@@ -22,8 +37,22 @@ html[data-theme="dark"] {
     --sun-color: #d46f37;
     --moon-color: #07203d;
     --color: black;
+    --colorForm: #c7c7c7;
+    --color-required: #ff0000;
+    --color-placeholder: #252525;
+    --color-green: rgb(2, 160, 2);
     --secondary-color: linear-gradient(to top, #a5572d 0%, #b8edfa 50%, #b8edfa 100%);
     --backgroundList: rgba(77, 77, 77, 0.281);
+    --backgroundForm: rgba(124, 124, 124, 0.1);
+    --border-left: rgba(0, 0, 0, 0.1);
+    --border-right: rgba(0, 0, 0, 0.2);
+    --box-shadow-form: rgba(0, 0, 0, 0.2);
+    --box-shadow-product: rgba(0, 0, 0, 0.16);
+    --box-shadow-product-hover: rgba(0, 0, 0, 0.5);
+    --row-color: rgba(255, 255, 255, 0.2);
+    --row-even-color: rgba(255, 255, 255, 0.4);
+    --form-border-left: rgba(0, 0, 0, 0.1);
+    --form-border-right: rgba(0, 0, 0, 0.3);
 }
 
 #root {

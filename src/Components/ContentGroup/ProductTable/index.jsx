@@ -11,7 +11,7 @@ import { faTrash, faPen } from '@fortawesome/free-solid-svg-icons'
 import './ProductTable.css'
 
 const ProductTable = () => {
-    const { initialModalState, productsList, loadProducts, productForm, setProductForm, setIsEditProd } = React.useContext(AppContext);
+    const { initialModalState, initialValueForm, productsList, loadProducts, productForm, setProductForm, setIsEditProd } = React.useContext(AppContext);
 
     const [modalState, setModalState] = useState(initialModalState);
 
@@ -55,6 +55,11 @@ const ProductTable = () => {
     const onEdit = (prod) => {
         setIsEditProd(true);
         setProductForm(prod);
+    }
+
+    const onCancelDelete = () => {
+        setProductForm(initialValueForm);
+        hideModal();
     }
 
     return (
@@ -102,7 +107,7 @@ const ProductTable = () => {
                     </>
                 }
             </div>
-            <Modal show={modalState.show} handleAccept={onDelete} handleClose={hideModal}>
+            <Modal show={modalState.show} handleAccept={onDelete} handleClose={onCancelDelete}>
                 <p>¿Está seguro que desea eliminar?</p>
             </Modal>
         </>

@@ -9,16 +9,18 @@
 }
 
 .input {
+    font-family: 'Georgia Pro Light', 'Georgia', 'Times New Roman', Times, serif;
+    font-weight: normal;
     background: rgba(194, 194, 194, 0.1);
     border-radius: 12px;
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 1px solid var(--border-left);
+    border-top: 1px solid var(--border-left);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.2);
+    box-shadow: 4px 4px 10px var(--box-shadow-form);
     box-sizing: border-box;
     color: var(--color);
-    font-size: 18px;
+    font-size: 15px;
     height: 100%;
     outline: 0;
     padding: 4px 15px 0;
@@ -31,8 +33,7 @@
 }
 
 .placeholder {
-    color: #c7c7c7;
-    font-family: sans-serif;
+    color: var(--color);
     left: 15px;
     line-height: 14px;
     pointer-events: none;
@@ -48,15 +49,15 @@
 }
 
 .input:not(:placeholder-shown)~.placeholder {
-    color: #9e9e9e;
+    color: var(--color-placeholder);
 }
 
 .input:focus~.placeholder {
     font-weight: bold;
-    color: #c4c4c4;
+    color: var(--color);
 }
 
 .input_requerido {
-    color: #ffa1a1;
+    color: var(--color-required);
     font-size: 12px;
 }

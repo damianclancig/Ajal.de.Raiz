@@ -9,11 +9,13 @@ footer {
 }
 
 .footer-container {
+    color: var(--color);
     display: flex;
 }
 
 .footer-container div {
     margin: 20px;
+    font-family: 'Georgia Pro', Georgia, 'Times New Roman', Times, serif;
 }
 
 .footer-container div h2 {
@@ -30,7 +32,7 @@ footer {
 }
 
 .social-section li a {
-    color:white;
+    color: var(--color);
     text-decoration: none;
     vertical-align: super;
 }
@@ -43,7 +45,10 @@ footer {
 .about-section {
     flex-grow: 1;
     flex-basis: 100%;
+}
 
+.about-section a {
+    color: var(--color);
 }
 
 .contact-section {
@@ -52,7 +57,7 @@ footer {
 }
 
 .contact-section a {
-    color:white;
+    color: var(--color);
     text-decoration: none;
 }
 

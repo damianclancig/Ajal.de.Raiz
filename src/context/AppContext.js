@@ -8,8 +8,6 @@ const ContextProvider = ({ children }) => {
         show: false
     };
 
-    const [productsList, loadProducts, loading] = useFirestore('products');
-
     const initialValueForm = {
         title: '', title_required: false,
         description: '', description_required: false,
@@ -18,12 +16,16 @@ const ContextProvider = ({ children }) => {
         image: '', image_required: false,
     }
 
+    const initialTextFileUpload = 'Seleccionar Imagen';
+    
+    const [productsList, loadProducts, loading] = useFirestore('products');
+
     const [productForm, setProductForm] = useState(initialValueForm);
 
     const [cart, setCart] = useState([]);
     const [isEditProd, setIsEditProd] = useState(false);
     const [file, setFile] = useState('');
-
+    const [textFileUpload, setTextFileUpload] = useState(initialTextFileUpload);
 
     const addToCart = (product) => {
         const productToAdd = {
@@ -50,7 +52,8 @@ const ContextProvider = ({ children }) => {
             cart, addToCart,
             productsList, loadProducts, loading,
             initialValueForm, productForm, setProductForm,
-            isEditProd, setIsEditProd, file, setFile,
+            isEditProd, setIsEditProd,
+            file, setFile, initialTextFileUpload, textFileUpload, setTextFileUpload,
         }}>
             {children}
         </AppContext.Provider>

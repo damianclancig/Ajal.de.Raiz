@@ -18,23 +18,28 @@
 .input-upload-file {
     background: rgba(194, 194, 194, 0.1);
     border-radius: 12px;
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 1px solid var(--border-left);
+    border-top: 1px solid var(--border-left);
+    border-bottom: 2px solid var(--border-right);
+    border-right: 2px solid var(--border-right);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.2);
+    box-shadow: 4px 4px 10px var(--box-shadow-form);
     box-sizing: border-box;
     color: var(--color);
-    font-size: 18px;
     height: 100%;
     outline: 0;
-    padding: 4px 15px 0;
-    width: 80%;
+    padding: 4px 10px 0;
+    width: 100%;
     transition: all 0.2s ease-in-out;
 }
 
 .input-upload-file:hover {
     background: rgba(194, 194, 194, 0.2);
+}
+
+.textPlaceholder {
+    color: var(--color);
 }
 
 .percentNumber {
@@ -43,17 +48,13 @@
 }
 
 .fadeOut {
-    color: green;
-    /* opacity: 0; */
+    color: var(--color-green);
+    opacity: 0;
     animation: fadeOut 2s;
     -webkit-animation: fadeOut 2s;
     -moz-animation: fadeOut 2s;
     -o-animation: fadeOut 2s;
     -ms-animation: fadeOut 2s;
-}
-
-.fadeOut svg {
-    color: green!important;
 }
 
 @keyframes fadeOut {
@@ -102,8 +103,10 @@
 }
 
 .button-upload {
-    width: 85px;
+    width: 135px;
     height: 25px;
+    margin-top: 3px;
+    margin-left: 10px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -111,7 +114,6 @@
     border-radius: 5px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
     background: rgb(24, 53, 77);
-    margin-right: 20px;
 }
 
 .button-upload,

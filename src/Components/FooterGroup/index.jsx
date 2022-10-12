@@ -1,5 +1,8 @@
+import React from 'react';
+import { Link } from 'react-router-dom'
 import facebookIcon from '../../img/facebook-icon.png'
 import instagramIcon from '../../img/instagram-icon.png'
+
 import './Footer.css'
 
 export default function Footer() {
@@ -22,6 +25,7 @@ export default function Footer() {
                 <div className='about-section'>
                     <h2>Acerca de Ajal de Raiz</h2>
                     <p>Somos un emprendimiento de plantas y suculentas, también ofrecemos sustratos, alimentos, y servicios para tus plantas.</p>
+                    <Link to='/acercade'>Ver más...</Link>
                 </div>
                 <div className='contact-section'>
                     <h2>Contacto</h2>

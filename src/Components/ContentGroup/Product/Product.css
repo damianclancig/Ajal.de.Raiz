@@ -10,7 +10,7 @@
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    box-shadow: var(--box-shadow-product) 0px 10px 36px 0px, var(--box-shadow-product) 0px 0px 0px 1px;
     backdrop-filter: blur(4.1px);
     -webkit-backdrop-filter: blur(4.1px);
     transition: background-color 0.5s ease,
@@ -23,7 +23,7 @@
     background-color: rgba(255, 255, 255, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 16px;
-    box-shadow: rgba(0, 0, 0, 0.5) 0px 14px 28px, rgba(0, 0, 0, 0.5) 0px 10px 10px;
+    box-shadow: var(--box-shadow-product-hover) 0px 14px 28px, var(--box-shadow-product-hover) 0px 10px 10px;
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
 }

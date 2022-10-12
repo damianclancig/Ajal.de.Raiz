@@ -8,7 +8,7 @@ const ToolTipImage = ({ product }) => {
             <span className="mytooltip tooltip-effect-1">
                 <span className="tooltip-item">Ver imagen</span>
                 <span className="tooltip-content clearfix">
-                    <img alt={product.title} src={product.image} />
+                    <img alt={product.title} src={product.image} title={product.image} />
                 </span>
             </span>
 

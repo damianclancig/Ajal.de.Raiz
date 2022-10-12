@@ -12,7 +12,7 @@ import Modal from '../Modal';
 
 const ProductForm = () => {
 
-    const { initialModalState, initialValueForm, loadProducts, productForm, setProductForm, isEditProd, setIsEditProd, setFile } = useContext(AppContext);
+    const { initialModalState, initialValueForm, loadProducts, productForm, setProductForm, isEditProd, setIsEditProd, setFile, setTextFileUpload, initialTextFileUpload } = useContext(AppContext);
 
     const [modalState, setModalState] = useState(initialModalState);
 
@@ -37,6 +37,8 @@ const ProductForm = () => {
     const onCancel = () => {
         setProductForm(initialValueForm)
         setIsEditProd(false)
+        setFile('');
+        setTextFileUpload(initialTextFileUpload)
     }
 
     const onEditProd = (product) => {
