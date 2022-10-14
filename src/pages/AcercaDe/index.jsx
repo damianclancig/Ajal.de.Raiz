@@ -21,7 +21,7 @@ function AcercaDe() {
                     cactus y muchas más variedades.</p>
                 <p>Este es un sitio para que podamos compartir todo lo que hemos aprendido, Ajal de Raíz nace hace un tiempo luego de un viaje, 
                     nos dimos cuenta que las grandes cosas surgen luego de una gran reinvención. Creemos que todos podemos armar minis bosques, 
-                    la idea de este emprendimiento es que encuentramos algo para regalarte, pensamos en los detalles para que puedas disfrutarlo y 
+                    la idea de este emprendimiento es que encontremos algo para regalarte, pensamos en los detalles para que puedas disfrutarlo y 
                     ayudar en lo que necesitas.</p>
                 <p>Pensamos en que no necesitamos grandes espacios para volverlos únicos y verdes, un jardín puede caber en cualquier rincón, podes 
                     construir un mini bosque, uno que que entre en tus manos. Aquí es donde dejamos que la imaginación fluya para armar piezas especiales.</p>

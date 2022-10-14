@@ -29,11 +29,11 @@ export default function Footer() {
                 </div>
                 <div className='contact-section'>
                     <h2>Contacto</h2>
-                    <li>
-                        Celular: <a href='https://api.whatsapp.com/send?phone=5491168793296' target="blank">+54 9 11 6879-3296</a>
-                    </li>
-                    <li>E-mail: <a href='mailto: contacto@ajalderaiz.com.ar' target="blank">contacto@ajalderaiz.com.ar</a></li>
-                    <li>Ubicación: Bernal, Buenos Aires.</li>
+                    <ul>
+                        <li>Celular: <a href='https://api.whatsapp.com/send?phone=5491168793296' target="blank">+54 9 11 6879-3296</a></li>
+                        <li>E-mail: <a href='mailto: contacto@ajalderaiz.com.ar' target="blank">contacto@ajalderaiz.com.ar</a></li>
+                        <li>Ubicación: Bernal, Buenos Aires.</li>
+                    </ul>
                 </div>
             </section>
             <section className='copyright'>Copyright &copy; Ajal de Raiz 2022</section>

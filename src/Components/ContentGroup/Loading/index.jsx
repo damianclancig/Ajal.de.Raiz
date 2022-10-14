@@ -1,6 +1,8 @@
 import React from 'react'
 import { AppContext } from '../../../context/AppContext';
 
+import './Loading.css'
+
 const Loading = () => {
     const { loading } = React.useContext(AppContext);
 
