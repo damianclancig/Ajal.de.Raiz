@@ -1,0 +1,27 @@
+.glassBackground {
+    position: fixed;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    /* top:0;
+    right: 0;
+    bottom: 0;
+    left: 0; */
+    margin: auto;
+
+    width: 95%;
+    height: 90%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--box-shadow-product) 0px 10px 36px 0px, var(--box-shadow-product) 0px 0px 0px 1px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    z-index: 2;
+}
+
+.showDetail {
+    display: block;
+}

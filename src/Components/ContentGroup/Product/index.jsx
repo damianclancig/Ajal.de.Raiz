@@ -5,17 +5,12 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 
 import './Product.css'
 
-const handleDetailProduct = () => {
-    
-}
-
-function Producto (props) {
-    const product = props.product;
+function Producto ({product, handleClickShowProductDetail}) {
     const {addToCart} = React.useContext(AppContext);
 
     return (
         <div className='cuadroProducto'>
-            <div className="producto" title="Ver producto" onClick={handleDetailProduct}>
+            <div className="producto" title="Ver producto" onClick={handleClickShowProductDetail}>
                 <span><img className="imagenProducto" src={product.image} alt="producto test" /></span>
                 <div className="">
                     <h3>{product.title}</h3>

@@ -1,10 +1,15 @@
 import React from 'react';
+import ProductDetailContent from '../ProductDetailContent';
+import ProductDetailTitle from '../ProductDetailTitle';
 
-function ProductDetail () {
+import './ProductDetail.css'
+
+function ProductDetail({ handleClickShowProductDetail }) {
     return (
         <>
             <div className="glassBackground">
-                Detalle
+                <ProductDetailTitle handleClickShowProductDetail={handleClickShowProductDetail} />
+                <ProductDetailContent />
             </div>
         </>
     )
