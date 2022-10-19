@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { Carousel } from 'react-responsive-carousel';
+import ImageResize from "../../Components/ContentGroup/ImageResize";
+import ImageBlob from '../../Components/ImageBlob';
+import useBlobUrl from '../../hooks/useBlobUrl';
+import Compress from "react-image-file-resizer";
+
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./Home.css"
@@ -10,9 +16,33 @@ import carouselFoto from '../../img/carousel/carousel1.jpg';
 import carouselFoto2 from '../../img/carousel/carousel2.jpg';
 import carouselFoto3 from '../../img/carousel/carousel3.jpg';
 import carouselFoto4 from '../../img/carousel/carousel4.jpg';
-import { Link } from 'react-router-dom';
 
-function Home() {
+const Home = () => {
+
+    const [imageToResize, setImageToResize] = useState(undefined);
+    const [resizedImage, setResizedImage] = useState(undefined);
+    // const [blobSrc, setBlobSrc] = useBlobUrl(tienda);
+
+
+    const newImageCompresed = Compress.imageFileResizer(
+        '../../img/TiendaAjal.png', // the file from input
+        480, // width
+        480, // height
+        "JPEG", // compress format WEBP, JPEG, PNG
+        70, // quality
+        0, // rotation
+        (uri) => {
+            console.log("tienda: ", tienda, "newImageCompresed: ", newImageCompresed)
+            setImageToResize(newImageCompresed);
+            console.log(uri);
+            // You upload logic goes here
+        },
+        "base64" // blob or base64 default base64
+    );
+
+
+
+
     return (
         <>
             <Helmet>
@@ -45,6 +75,23 @@ function Home() {
                     no dudes en contactarnos para poder asesorarte y conseguirte lo que tanto querés.</p>
                 <div className="center">
                     <Link to='/tienda'>
+                        {/* <div>
+                            <ImageResize
+                                imageToResize={imageToResize}
+                                onImageResized={(resizedImage) => setResizedImage(resizedImage)}
+                            />
+                        </div>
+                        {
+                            resizedImage &&
+                            <div>
+                                <h2>Resized Image</h2>
+                                <img
+                                    alt="Resize_Image"
+                                    src={resizedImage}
+                                />
+                            </div>
+                        } */}
+                        {/* <ImageBlob src={tienda} alt="Tienda" /> */}
                         <img src={tienda} alt='Tienda' title='Ingresar a la Tienda' width='500px' />
                     </Link>
                 </div>
