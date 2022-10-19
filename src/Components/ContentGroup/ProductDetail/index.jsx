@@ -9,6 +9,7 @@ function ProductDetail({ handleClickShowProductDetail }) {
         <>
             <div className="glassBackground">
                 <ProductDetailTitle handleClickShowProductDetail={handleClickShowProductDetail} />
+                <hr className="shine" />
                 <ProductDetailContent />
             </div>
         </>

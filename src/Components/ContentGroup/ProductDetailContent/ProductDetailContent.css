@@ -1,0 +1,35 @@
+.contentDetailProductParent {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contentDetailProductParent section {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.imageSection-detailProduct {
+    width: 58%;
+}
+
+.descriptionSection-detailProduct {
+    width: 35%;
+}
+
+.image-detailProduct {
+    height: 500px;
+    border:1px solid #000000;
+    border-radius: 10px;
+}
+
+.description-detailProduct {
+    width: 100%;
+    font-size: 25px;
+    text-align: justify;
+}
+
+.addCart-detailProduct {
+    
+    bottom: 10px;
+}

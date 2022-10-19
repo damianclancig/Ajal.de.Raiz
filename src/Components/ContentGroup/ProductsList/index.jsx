@@ -12,6 +12,7 @@ function Content() {
 
     const handleClickShowProductDetail = () => {
         setToggleProductDetail(!toggleProductDetail);
+        
     }
     return (
         <>
