@@ -4,13 +4,13 @@ import ProductDetailTitle from '../ProductDetailTitle';
 
 import './ProductDetail.css'
 
-function ProductDetail({ handleClickShowProductDetail }) {
+const ProductDetail = ({ handleClickShowProductDetail, classActive, viewProductDetail }) => {
     return (
         <>
-            <div className="glassBackground">
-                <ProductDetailTitle handleClickShowProductDetail={handleClickShowProductDetail} />
+            <div className={"glassBackground " + classActive }>
+                <ProductDetailTitle handleClickShowProductDetail={handleClickShowProductDetail} title={viewProductDetail.title} />
                 <hr className="shine" />
-                <ProductDetailContent />
+                <ProductDetailContent product={viewProductDetail} />
             </div>
         </>
     )

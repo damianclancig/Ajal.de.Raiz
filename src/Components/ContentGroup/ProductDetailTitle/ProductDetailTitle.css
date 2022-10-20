@@ -58,3 +58,30 @@
     text-shadow: 0 0 20px rgba(0, 0, 0, 1), 0 0 5px rgba(0, 0, 0, 1);
 }
 
+@media only screen and (max-width: 767px) {
+    .titleDetailProductParent {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .closeBotton-detailProduct {
+        position: relative;
+        width: 35px;
+        height: 30px;
+        border: 2px solid #6c6c6c;
+        background-color: #6e0d08;
+        border-radius: 50%;
+        top: -20px;
+        left: 20px;
+    }
+
+    .closeBotton-detailProduct::before,
+    .closeBotton-detailProduct::after {
+        width: 24px;
+        height: 3px;
+        content: "";
+        background-color: #6c6c6c;
+    }
+
+
+}

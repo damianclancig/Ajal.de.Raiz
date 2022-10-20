@@ -19,7 +19,7 @@ html {
     --color-placeholder: #b9b9b9;
     --color-green: rgb(66, 240, 66);
     --secondary-color: linear-gradient(to top, #a5572d 0%, #07203d 50%, #07203d 100%);
-    --backgroundList: rgba(255, 255, 255, 0.281);
+    --backgroundList: rgba(0, 0, 0, 0.281);
     --backgroundForm: rgba(255, 255, 255, 0.1);
     --border-left: rgba(255, 255, 255, 0.1);
     --border-right: rgba(255, 255, 255, 0.2);
@@ -42,7 +42,7 @@ html[data-theme="dark"] {
     --color-placeholder: #252525;
     --color-green: rgb(2, 160, 2);
     --secondary-color: linear-gradient(to top, #a5572d 0%, #b8edfa 50%, #b8edfa 100%);
-    --backgroundList: rgba(77, 77, 77, 0.281);
+    --backgroundList: rgba(255, 255, 255, 0.281);
     --backgroundForm: rgba(124, 124, 124, 0.1);
     --border-left: rgba(0, 0, 0, 0.1);
     --border-right: rgba(0, 0, 0, 0.2);

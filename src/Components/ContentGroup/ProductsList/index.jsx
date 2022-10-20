@@ -6,14 +6,18 @@ import ProductDetail from '../ProductDetail';
 
 import "./productList.css";
 
-function Content() {
+const Content = () => {
     const { productsList } = React.useContext(AppContext);
     const [toggleProductDetail, setToggleProductDetail] = useState(false)
+    const [classActive, setClassActive] = useState('')
+    const [viewProductDetail, setViewProductDetail] = useState({})
 
-    const handleClickShowProductDetail = () => {
+    const handleClickShowProductDetail = (product) => {
         setToggleProductDetail(!toggleProductDetail);
-        
+        setClassActive(toggleProductDetail ? '' : 'active')
+        setViewProductDetail(product)
     }
+
     return (
         <>
             <Loading />
@@ -24,10 +28,7 @@ function Content() {
                     })
                 }
             </div>
-            {toggleProductDetail ?
-                <ProductDetail handleClickShowProductDetail={handleClickShowProductDetail} />
-                : ''
-            }
+            <ProductDetail handleClickShowProductDetail={handleClickShowProductDetail} classActive={classActive} viewProductDetail={viewProductDetail} />
         </>
     )
 }

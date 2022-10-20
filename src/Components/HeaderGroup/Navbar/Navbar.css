@@ -34,11 +34,11 @@
 }
 
 .items a {
-    color: white;
+    color: var(--color);
 }
 
 .items a:hover {
-    text-shadow: 0px 1px 30px rgb(255, 255, 255);
+    text-shadow: 0px 1px 30px var(--color);
     font-weight: bold;
 }
 
@@ -59,7 +59,7 @@
     margin-right: auto;
 }
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-width: 767px) {
     .list {
         list-style-type: none;
         background: var(--backgroundList);

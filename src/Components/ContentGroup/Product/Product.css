@@ -1,105 +1,176 @@
 .cuadroProducto {
-    width: 240px;
+    width: 250px;
     height: 350px;
 }
 
 .producto {
-    width: 180px;
+    width: 190px;
+    height: 300px;
     margin: 0 auto;
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--backgroundList);
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: var(--box-shadow-product) 0px 10px 36px 0px, var(--box-shadow-product) 0px 0px 0px 1px;
     backdrop-filter: blur(4.1px);
     -webkit-backdrop-filter: blur(4.1px);
     transition: background-color 0.5s ease,
-                width 0.5s ease,
-                box-shadow 0.5s ease;
+        width 0.5s ease,
+        box-shadow 0.5s ease;
 }
 
 .producto:hover {
-    width: 190px;
-    background-color: rgba(255, 255, 255, 0.3);
+    width: 200px;
+    background-color: var(--backgroundList);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 16px;
     box-shadow: var(--box-shadow-product-hover) 0px 14px 28px, var(--box-shadow-product-hover) 0px 10px 10px;
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
+    cursor: pointer;
+}
+
+.imageProductBox {
+    width: 100%;
+    text-align: center;
 }
 
 .imagenProducto {
-    width: 180px;
+    max-width: 100%;
+    max-height: 150px;
     border-radius: 10px;
     transition: width 0.5s ease;
 }
 
-.producto:hover .imagenProducto {
-    width: 190px;
+.stockPriceProduct {
+    display: flex;
+    position: fixed;
+    bottom: 50px;
+    width: 90%;
+}
+
+.stockProduct {
+    width: 40%;
+}
+
+.stockNumberProduct {
+    font-size: 20px;
+}
+
+.priceProduct {
+    width: 60%;
+    text-align: right;
+}
+
+.priceNumberProduct {
+    font-size: 20px;
 }
 
 .btnAddCart {
-  margin: 5px;
-  padding: 5px 10px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: opacity 0.5s ease,
-              background-position 0.5s ease;
-  background-size: 200% auto;
-  color: white;
-  border-radius: 10px;
-  display: block;
-  border: 0px;
-  font-weight: 700;
-  box-shadow: 0px 0px 14px -7px #f09819;
-  background-image: linear-gradient(45deg, #ff522fDD 0%, #f09619DD  51%, #FF512FDD  100%);
-  opacity: 0.2;
-  cursor: pointer;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+    position: fixed;
+    width: 190px;
+    padding: 10px 5px;
+    bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: opacity 0.5s ease,
+        background-position 0.5s ease,
+        width 0.5s ease;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+    display: block;
+    border: 0px;
+    font-weight: 700;
+    box-shadow: 0px 0px 14px -7px #f09819;
+    background-image: linear-gradient(45deg, #ff522fDD 0%, #f09619DD 51%, #FF512FDD 100%);
+    opacity: 0.2;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
 }
 
 .btnAddCart:hover {
-  background-position: right center;
-  /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
 }
 
 .producto:hover .btnAddCart {
+    width: 200px;
     opacity: 1;
 }
 
 .btnAddCart:active {
-  transform: scale(0.95);
+    transform: scale(0.95);
 }
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-width: 767px) {
     .cuadroProducto {
-        width: 180px;
-        height: 310px;
+        width: 190px;
+        height: 320px;
     }
+
     .producto {
-        width: 150px;
+        width: 180px;
+        height: 280px;
         margin: 0 auto;
         padding: 5px;
-        background: rgba(231, 255, 255, 0.2);
         border-radius: 10px;
     }
-            
-    .imagenProducto {
-        width: 150px;
-        margin: 0 auto;
-        border-radius: 10px;
-    }
-    
+
     .producto:hover {
-        width: 160px;
+        width: 190px;
+        border-radius: 10px;
     }
-    
-    .producto:hover .imagenProducto {
-        width: 160px;
+
+    .imageProductBox {
+        width: 100%;
+        text-align: center;
     }
+
+    .imagenProducto {
+        max-width: 100%;
+        max-height: 150px;
+        border-radius: 10px;
+        transition: width 0.5s ease;
+    }
+
+    .stockProduct {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .stockNumberProduct {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .priceProduct {
+        width: 65%;
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .priceNumberProduct {
+        font-size: 20px;
+    }
+
+    .btnAddCart {
+        width: 180px;
+        padding: 8px 5px;
+        bottom: 5px;
+        font-size: 12px;
+        opacity: 1;
+    }
+
+    .producto:hover .btnAddCart {
+        width: 190px;
+    }
+
 
 }
