@@ -1,8 +1,29 @@
+@use '../../../App';
+
 .contentDetailProductParent {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
     overflow-y: scroll;
     height: 88%;
+    scrollbar-width: thin;
+    scrollbar-color: #4d4d4d #383838;
+}
+
+/* Chrome, Edge, and Safari */
+.contentDetailProductParent::-webkit-scrollbar {
+    width: 13px;
+}
+
+.contentDetailProductParent::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background: #383838;
+}
+
+.contentDetailProductParent::-webkit-scrollbar-thumb {
+    background-color: #4d4d4d;
+    border-radius: 5px;
+    border: 2px solid #686868;
 }
 
 .contentDetailProductParent section {
@@ -12,11 +33,15 @@
 }
 
 .imageSection-detailProduct {
-    width: 58%;
+    width: 55%;
 }
 
 .descriptionSection-detailProduct {
     width: 35%;
+}
+
+.longDescriptionSection-detailProduct {
+    width: 100%;
 }
 
 .image-detailProduct {
@@ -26,7 +51,7 @@
 
 .imageProduct-detailProduct {
     max-width: 100%;
-    max-height: 400px;
+    max-height: 100%;
     border: 0.001em solid rgba(0, 0, 0);
     border-radius: 5px;
     box-shadow: rgba(255, 255, 255, 0.726) 10px 10px 1px 0px inset, rgba(255, 255, 255, 0.2) 0px 5px 20px 10px, rgba(255, 255, 255, 0.9) 0px 20px 20px -30px;
@@ -71,7 +96,13 @@
     text-decoration: none;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: App.$max-resolution-responsive) {
+
+    /* Chrome, Edge, and Safari */
+    .contentDetailProductParent::-webkit-scrollbar {
+        width: 7px;
+    }
+
     .imageSection-detailProduct {
         width: 100%;
     }
@@ -80,6 +111,5 @@
         width: 100%;
     }
 
-    .addCart-detailProduct {
-    }
+    .addCart-detailProduct {}
 }

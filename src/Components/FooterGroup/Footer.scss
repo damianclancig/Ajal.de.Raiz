@@ -1,3 +1,5 @@
+@use '../../App';
+
 footer {
     display: flex;
     flex-direction: column;
@@ -13,7 +15,7 @@ footer {
     display: flex;
 }
 
-.footer-container div {
+.footer-container {
     margin: 20px;
     font-family: 'Georgia Pro', Georgia, 'Times New Roman', Times, serif;
 }
@@ -38,7 +40,7 @@ footer {
 }
 
 .social-section li a:hover {
-    color:cornflowerblue;
+    color: cornflowerblue;
     text-decoration: underline;
 }
 
@@ -56,13 +58,37 @@ footer {
     flex-basis: 100%;
 }
 
+.contact-section h2 {
+    text-align: end;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0px;
+}
+
+.infoRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 0px;
+    text-align: end;
+}
+
+.info {
+    width: 250px;
+}
+
 .contact-section a {
     color: var(--color);
     text-decoration: none;
 }
 
 .contact-section a:hover {
-    color:cornflowerblue;
+    color: cornflowerblue;
     text-decoration: underline;
 }
 
@@ -71,8 +97,24 @@ footer {
     text-align: center;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: App.$max-resolution-responsive) {
     .footer-container {
         flex-direction: column;
+    }
+
+    .social-section {
+        margin-bottom: 20px;
+    }
+    
+    .about-section {
+        margin-bottom: 20px;
+    }
+    
+    .contact-section h2 {
+        text-align: start;
+    }
+
+    .infoRow {
+        justify-content: space-around;
     }
 }

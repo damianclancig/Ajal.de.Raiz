@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { AppContext } from "../../../context/AppContext";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
-import './ProductDetailContent.css'
+import './ProductDetailContent.scss'
 
 const ProductDetailContent = ({ product }) => {
     const { addToCart } = React.useContext(AppContext);
@@ -24,18 +24,20 @@ const ProductDetailContent = ({ product }) => {
                 <div className="stock-detailProduct">Stock Disponible {product.stock} unidades</div>
                 <button className="addCart-detailProduct" onClick={() => addToCart(product)}>Agregar al carrito <FontAwesomeIcon icon={faCartShopping} className="cartIcon" /></button>
             </section>
-            <section>
+            <section className="longDescriptionSection-detailProduct">
                 <div className="longDescription-detailProduct">Descripción larga</div>
-                <div className="feature">Características:</div>
-                <div>Dimensiones: 10cm X 20cm</div>
-                <div>Dimensiones: 10cm X 20cm</div>
-                <div>Dimensiones: 10cm X 20cm</div>
-                <div>Dimensiones: 10cm X 20cm</div>
-                <div>Dimensiones: 10cm X 20cm</div>
-                <div>Dimensiones: 10cm X 20cm</div>
-                <div>Dimensiones: 10cm X 20cm</div>
-                <div>Dimensiones: 10cm X 20cm</div>
-                <div>Last</div>
+                <div className="feature">
+                    <div>Características:</div>
+                    <div>Dimensiones: 10cm X 20cm</div>
+                    <div>Dimensiones: 10cm X 20cm</div>
+                    <div>Dimensiones: 10cm X 20cm</div>
+                    <div>Dimensiones: 10cm X 20cm</div>
+                    <div>Dimensiones: 10cm X 20cm</div>
+                    <div>Dimensiones: 10cm X 20cm</div>
+                    <div>Dimensiones: 10cm X 20cm</div>
+                    <div>Dimensiones: 10cm X 20cm</div>
+                    <div>Last</div>
+                </div>
             </section>
         </div>
     )

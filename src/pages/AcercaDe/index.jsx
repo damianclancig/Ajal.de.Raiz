@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 
-import "./AcercaDe.css"
+import "./AcercaDe.scss"
 
 import mini1 from "../../img/mini1.jpg"
 import mini2 from "../../img/mini2.jpg"

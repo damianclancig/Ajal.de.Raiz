@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './ToolTipImage.css'
+import './ToolTipImage.scss'
 
 const ToolTipImage = ({ product }) => {
     return (

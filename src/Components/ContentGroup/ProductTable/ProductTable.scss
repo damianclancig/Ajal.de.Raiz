@@ -1,3 +1,5 @@
+@use '../../../App';
+
 .container {
     display: flex;
     margin: 0 3rem 0 3rem;
@@ -5,7 +7,7 @@
     position: relative;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: App.$max-resolution-responsive) {
     .container {
         display: flex;
         margin: 0 0rem 0 0rem;

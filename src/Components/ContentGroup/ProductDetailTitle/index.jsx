@@ -1,6 +1,6 @@
 import React from "react";
 
-import './ProductDetailTitle.css'
+import './ProductDetailTitle.scss'
 
 const ProductDetailTitle = ({ handleClickShowProductDetail, title }) => {
 

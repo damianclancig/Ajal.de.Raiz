@@ -4,7 +4,7 @@ import Producto from '../Product'
 import Loading from '../Loading';
 import ProductDetail from '../ProductDetail';
 
-import "./productList.css";
+import "./productList.scss";
 
 const Content = () => {
     const { productsList } = React.useContext(AppContext);
@@ -13,6 +13,7 @@ const Content = () => {
     const [viewProductDetail, setViewProductDetail] = useState({})
 
     const handleClickShowProductDetail = (product) => {
+        // document.getElementsByTagName('body').classList.add('no-scroll')
         setToggleProductDetail(!toggleProductDetail);
         setClassActive(toggleProductDetail ? '' : 'active')
         setViewProductDetail(product)

@@ -1,3 +1,5 @@
+@use '../../../App';
+
 .searchbar {
     max-width: 600px;
     display: flex;
@@ -60,7 +62,7 @@
     cursor: pointer;
   }
 
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: App.$max-resolution-responsive) {
     .searchbar {
       max-width: 210px;
   }

@@ -9,7 +9,7 @@ import Administration from './pages/Administration';
 import Footer from './Components/FooterGroup'
 import ListProducts from './Components/ContentGroup/ProductsList'
 
-import './App.css'
+import './App.scss'
 function App() {
   return (
     <>

@@ -8,7 +8,7 @@ import Loading from '../Loading';
 import Modal from '../Modal';
 
 import { faTrash, faPen } from '@fortawesome/free-solid-svg-icons'
-import './ProductTable.css'
+import './ProductTable.scss'
 
 const ProductTable = () => {
     const { initialModalState, initialValueForm, productsList, loadProducts, productForm, setProductForm, setIsEditProd } = React.useContext(AppContext);

@@ -1,6 +1,6 @@
 import MenuBar from '../MenuBar'
 import DarkModeBotton from '../DarkModeBotton'
-import './Header.css'
+import './Header.scss'
 
 
 function Header() {
@@ -13,6 +13,7 @@ function Header() {
                 <MenuBar />
                 <div className='gridLogo'>
                     <div className='logo' />
+                    <div className='troncoDivisor' />
                     <div className='kokedama' />
                 </div>
             </section> 

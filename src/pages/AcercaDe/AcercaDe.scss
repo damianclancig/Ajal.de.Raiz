@@ -1,3 +1,5 @@
+@use '../../App';
+
 .panelAcercaDe {
     margin: 0 15% 0 15%;
     font-family: 'Georgia Pro', 'Georgia', 'Times New Roman', Times, serif;
@@ -6,12 +8,13 @@
 }
 
 .panelAcercaDe p {
-    padding-bottom: 40px;
+    text-align: justify;
+    margin-bottom: 40px;
     z-index: 2;
 }
 
 .minis img {
-    padding: 0 20px 10px 10px;
+    padding: 0px 0px 10px 10px;
 }
 
 /* .logoCentral {
@@ -33,8 +36,22 @@
     position: absolute;
     background: url("../../img/RamaLateralDer.png") no-repeat;
     background-size: 250px auto;
-    top: 90%;
+    top: 150%;
     right: 0px;
     width: 250px;
     height: 525px;
+}
+
+@media only screen and (max-width: App.$max-resolution-responsive) {
+    .panelAcercaDe {
+        margin: 0 12% 0 12%;
+        font-size: 1.3rem;
+    }
+    
+    .ramaLateral {
+        background-size: 150px auto;
+        top: 80%;
+        width: 150px;
+    }
+    
 }

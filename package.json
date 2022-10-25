@@ -1,10 +1,11 @@
 {
   "name": "ajal.de.raiz.tienda",
-  "version": "0.50.0",
+  "version": "0.60.0",
   "private": true,
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "sass": "^1.55.0"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
@@ -17,6 +18,7 @@
     "firebase": "^9.12.0",
     "gh-pages": "^4.0.0",
     "npm-check-updates": "^16.2.1",
+    "nth-check": ">=2.0.1",
     "react-bootstrap": "1.4.0",
     "react-cool-onclickoutside": "1.5.8",
     "react-fontawesome": "1.7.1",
@@ -24,8 +26,7 @@
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.4.1",
     "react-scripts": "^5.0.1",
-    "web-vitals": "^2.1.4",
-    "nth-check": ">=2.0.1"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -44,7 +45,7 @@
   },
   "browserslist": {
     "production": [
-      ">10%",
+      ">60%",
       "not dead",
       "not op_mini all"
     ],

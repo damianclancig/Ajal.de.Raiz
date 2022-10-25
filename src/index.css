@@ -2,6 +2,41 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scrollbar-color: red yellow;
+}
+
+html {
+  --scrollbarBG: #616161;
+  --thumbBG: #757575;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #4d4d4d #383838;
+}
+
+/* Chrome, Edge, and Safari */
+body::-webkit-scrollbar {
+  width: 13px;
+}
+
+body::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background: #383838;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #4d4d4d;
+  border-radius: 5px;
+  border: 2px solid #686868;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 code {
