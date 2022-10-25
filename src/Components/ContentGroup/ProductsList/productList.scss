@@ -1,3 +1,5 @@
+@use '../../../App';
+
 .listaProductos {
     display: flex;
     flex-wrap: wrap;
@@ -6,9 +8,10 @@
     margin-right: 110px;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: App.$max-resolution-responsive) {
     .listaProductos {
         margin-left: 0px;
         margin-right: 0px;
+        justify-content: space-evenly;
     }
 }

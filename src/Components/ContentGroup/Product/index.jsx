@@ -3,7 +3,7 @@ import { AppContext } from '../../../context/AppContext';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 
-import './Product.css'
+import './Product.scss'
 
 const Producto = ({ product, handleClickShowProductDetail }) => {
     const { addToCart } = React.useContext(AppContext);

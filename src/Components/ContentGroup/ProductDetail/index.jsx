@@ -2,7 +2,7 @@ import React from 'react';
 import ProductDetailContent from '../ProductDetailContent';
 import ProductDetailTitle from '../ProductDetailTitle';
 
-import './ProductDetail.css'
+import './ProductDetail.scss'
 
 const ProductDetail = ({ handleClickShowProductDetail, classActive, viewProductDetail }) => {
     return (

@@ -1,3 +1,5 @@
+@use '../../../App';
+
 .titleDetailProductParent {
     display: flex;
 }
@@ -58,7 +60,7 @@
     text-shadow: 0 0 20px rgba(0, 0, 0, 1), 0 0 5px rgba(0, 0, 0, 1);
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: App.$max-resolution-responsive) {
     .titleDetailProductParent {
         display: flex;
         flex-direction: row-reverse;

@@ -9,6 +9,8 @@ body {
     font-weight: normal;
 }
 
+$max-resolution-responsive: 900px;
+
 /* Variables de color si el tema es nulo o light */
 html {
     --sun-color: #07203d;

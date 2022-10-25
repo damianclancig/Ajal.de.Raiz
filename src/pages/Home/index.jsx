@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import { Carousel } from 'react-responsive-carousel';
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import "./Home.css"
+import "./Home.scss"
 
 import tienda from '../../img/TiendaAjal.png';
 import carouselFoto from '../../img/carousel/carousel1.jpg';
@@ -33,7 +33,7 @@ function Home() {
                 </div>
             </Carousel>
             <br />
-            <div className="panelAcercaDe">
+            <div className="panelHome">
                 <p>Nuestra producción está dirigida tanto a profesionales como a particulares, también realizamos trabajos de aplicación en superficies
                     verdes y varios tipos de regalos para fiestas, bodas y otras ocasiones especiales.</p>
                 <p>Las plantas fueron y son nuestra fuente de energía, la biofilia que emana a los humanos es increíblemente precioso. Conectar con
@@ -43,9 +43,11 @@ function Home() {
                     ideas para decorar.</p>
                 <p>Te invitamos a que ingreses a nuestra tienda para ver todos los productos que podemos ofrecerte, si hay algo que no encontrás lo que quieres,
                     no dudes en contactarnos para poder asesorarte y conseguirte lo que tanto querés.</p>
+                    <br />
                 <div className="center">
+                    <h2>Ingresar a la Tienda</h2>
                     <Link to='/tienda'>
-                        <img src={tienda} alt='Tienda' title='Ingresar a la Tienda' width='500px' />
+                        <img src={tienda} alt='Tienda' title='Ingresar a la Tienda' className='tiendaImg' />
                     </Link>
                 </div>
             </div>
