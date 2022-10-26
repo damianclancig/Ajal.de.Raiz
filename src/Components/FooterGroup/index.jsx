@@ -13,11 +13,11 @@ export default function Footer() {
                     <h2>Redes sociales</h2>
                     <ul className='listSocial'>
                         <li>
-                            <img src={facebookIcon} alt='Facebook' width='30px' />
+                            <img src={facebookIcon} alt='Facebook' width='30' />
                             <a href='https://www.facebook.com/ajalderaiz' target="blank">@ajalderaiz</a>
                         </li>
                         <li>
-                            <img src={instagramIcon} alt='Instagram' width='30px' />
+                            <img src={instagramIcon} alt='Instagram' width='30' />
                             <a href='https://www.instagram.com/ajalderaiz/' target="blank">@ajalderaiz</a>
                         </li>
                     </ul>

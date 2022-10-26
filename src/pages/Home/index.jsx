@@ -47,7 +47,7 @@ function Home() {
                 <div className="center">
                     <h2>Ingresar a la Tienda</h2>
                     <Link to='/tienda'>
-                        <img src={tienda} alt='Tienda' title='Ingresar a la Tienda' className='tiendaImg' />
+                        <img src={tienda} alt='Tienda' title='Ingresar a la Tienda' className='tiendaImg' width="500" height="auto" />
                     </Link>
                 </div>
             </div>
