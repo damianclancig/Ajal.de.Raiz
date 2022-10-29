@@ -1,7 +1,10 @@
+@use '../../../App';
+
 .input-container {
     height: 30px;
     position: relative;
-    width: 100%;
+    width: 46%;
+    padding: 0 2% 0 2%;
 }
 
 .ic1 {
@@ -34,7 +37,7 @@
 
 .placeholder {
     color: var(--color);
-    left: 15px;
+    left: 25px;
     line-height: 14px;
     pointer-events: none;
     position: absolute;
@@ -60,4 +63,15 @@
 .input_requerido {
     color: var(--color-required);
     font-size: 12px;
+}
+
+@media only screen and (max-width: App.$max-resolution-responsive) {
+    .input-container {
+        width: 100%;
+        padding: 0;
+    }
+
+    .placeholder {
+        left: 15px;
+    }    
 }

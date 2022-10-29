@@ -42,6 +42,46 @@
     color: var(--color);
 }
 
+.pulse-container {
+    width: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 15px;
+    padding-top: 14px;
+}
+
+.pulse-bubble {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #919191;
+}
+
+.pulse-bubble-1 {
+    animation: pulse .4s ease 0s infinite alternate;
+}
+
+.pulse-bubble-2 {
+    animation: pulse .4s ease .2s infinite alternate;
+}
+
+.pulse-bubble-3 {
+    animation: pulse .4s ease .4s infinite alternate;
+}
+
+@keyframes pulse {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: .25;
+        transform: scale(.75);
+    }
+}
+
 .percentNumber {
     display: block;
     text-align: end;
@@ -164,3 +204,4 @@
 .button-upload:active .icon svg {
     transform: scale(0.8);
 }
+

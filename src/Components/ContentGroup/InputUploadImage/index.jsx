@@ -10,7 +10,7 @@ import Modal from '../Modal';
 import { faCloudArrowUp, faCheck } from '@fortawesome/free-solid-svg-icons'
 import './InputUploadImage.css'
 
-const InputUploadImage = (idUpload) => {
+const InputUploadImage = (idUpload, required) => {
 
 	const { productForm, setProductForm, file, setFile, initialModalState, textFileUpload, setTextFileUpload } = React.useContext(AppContext);
 
@@ -27,10 +27,11 @@ const InputUploadImage = (idUpload) => {
 		setModalState({ show: false });
 	};
 
-	let refs = {};
-	refs.fileSelector = document.querySelector('input[name=fileUploadProduct]');
-
 	const handleChangeImage = () => {
+		let refs = {};
+		refs.fileSelector = document.querySelector(`input[name=${idUpload.id}]`);
+		document.getElementsByClassName('loadingUpload')[0].classList.remove('noDisplay')
+		document.getElementsByClassName('button-upload')[0].classList.add('noDisplay')
 		processFiles(refs.fileSelector.files);
 		refs.fileSelector.value = "";
 		// setFile(event.target.files[0]);
@@ -64,7 +65,7 @@ const InputUploadImage = (idUpload) => {
 			setFile(fileName);
 
 			if (fileName.length > 17)
-				fileName = fileName.substring(0, 17)
+				fileName = fileName.substring(0, 16)
 			setTextFileUpload(fileName);
 		})
 			.then((rawImage) => {
@@ -96,8 +97,9 @@ const InputUploadImage = (idUpload) => {
 				});
 			})
 			.then((data) => {
-				console.log("ready upload")
-		});
+				document.getElementsByClassName('loadingUpload')[0].classList.add('noDisplay')
+				document.getElementsByClassName('button-upload')[0].classList.remove('noDisplay')
+			});
 	}
 
 	const handleUploadImage = () => {
@@ -119,12 +121,17 @@ const InputUploadImage = (idUpload) => {
 			setPercent(percent);
 			if (percent === 100) {
 				setFileUploaded(true);
+				document.getElementsByClassName('button-upload')[0].classList.add('noDisplay')
 			}
 		},
 			(err) => console.log(err), () => {
 				// download url
 				getDownloadURL(uploadTask.snapshot.ref).then((url) => {
-					setProductForm({ ...productForm, 'image': url, 'image_required': !Boolean(url) })
+					let data = [...productForm];
+					let index = data.findIndex(obj => obj.name === 'image')
+					data[index]["value"] = url;
+					data[index]["required"] = !Boolean(url)
+					setProductForm(data);
 				});
 			}
 		);
@@ -132,19 +139,30 @@ const InputUploadImage = (idUpload) => {
 
 	return (
 		<>
-			<div className='input-file-container ic1'>
-				<input type="file" id={idUpload} name="fileUploadProduct" className='input-upload-file-hidden' onChange={handleChangeImage} accept="/image/*" />
-				<label htmlFor={idUpload} className='input-upload-file textPlaceholder'>{textFileUpload}</label>
-				<Button buttonClass="button-upload" buttonIcon={faCloudArrowUp} handleClick={handleUploadImage} disabled>Subir</Button>
+			<div className='input-container ic1'>
+				<div className='input-file-container'>
+					<input type="file" id={idUpload.id} name={idUpload.id} className='input-upload-file-hidden' onChange={handleChangeImage} accept="/image/*" />
+					<label htmlFor={idUpload.id} className='input-upload-file textPlaceholder'>{textFileUpload} {required ? '*' : ''}</label>
+					<div className='loadingUpload noDisplay'>
+						<div className="pulse-container">
+							<div className="pulse-bubble pulse-bubble-1"></div>
+							<div className="pulse-bubble pulse-bubble-2"></div>
+							<div className="pulse-bubble pulse-bubble-3"></div>
+						</div>
+					</div>
+					<Button buttonClass="button-upload noDisplay" buttonIcon={faCloudArrowUp} handleClick={handleUploadImage}>Subir</Button>
+				</div>
+				<div>
+					{percent && percent < 100 ?
+						<span className='percentNumber'>{percent}% done</span>
+						: ""
+					}
+					{fileUploaded ?
+						<span className='percentNumber fadeOut'>Imagen cargado <FontAwesomeIcon icon={faCheck} className="plus-icon" /></span>
+						: ""
+					}
+				</div>
 			</div>
-			{percent && percent < 100 ?
-				<span className='percentNumber'>{percent}% done</span>
-				: ""
-			}
-			{fileUploaded ?
-				<span className='percentNumber fadeOut'>Imagen cargado <FontAwesomeIcon icon={faCheck} className="plus-icon" /></span>
-				: ""
-			}
 			<Modal show={modalState.show} handleAccept={hideModal}>
 				<p>Debe seleccionar una imagen</p>
 			</Modal>

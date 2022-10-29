@@ -1,3 +1,5 @@
+@use '../../../App';
+
 .containerForm {
     display: flex;
     justify-content: center;
@@ -15,7 +17,18 @@
     border-radius: 16px;
     box-sizing: border-box;
     padding: 20px;
-    width: 320px;
+    width: 650px;
+}
+
+.divInputsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.divColumn {
+    width: 40%;
+    padding: 0 10px 0 10px;
 }
 
 .buttonFormContent {
@@ -24,13 +37,18 @@
     justify-content: space-between;
 }
 
-.input-container {
-    height: 30px;
-    position: relative;
-    width: 100%;
-}
+@media only screen and (max-width: App.$max-resolution-responsive) {
+    .productForm {
+        width: 320px;
+    }
 
-.ic1 {
-    margin-top: 20px;
-}
+    .divInputsContainer {
+        flex-direction: column;
+    }
 
+    .divColumn {
+        width: 100%;
+        padding: 0;
+    }
+    
+}

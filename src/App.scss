@@ -62,6 +62,10 @@ html[data-theme="dark"] {
     background: var(--secondary-color);
 }
 
+.noDisplay { 
+    display: none;
+}
+
 .boton {
     background-image: linear-gradient(45deg, #ff522f 0%, #f09619  51%, #FF512F  100%);
     background-size: 200% auto;
