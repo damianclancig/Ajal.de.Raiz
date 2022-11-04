@@ -9,11 +9,23 @@ const productToJson = (product) => {
     let prodJson = "{"
     product.forEach(prodItem => {
         prodJson = prodJson + (prodJson === '{' ? '' : ',')
-        prodJson = prodJson + '"' + prodItem.name + '":"' + prodItem.value + '"'
+        switch (typeof prodItem.value) {
+            case "number":
+                prodJson = prodJson + '"' + prodItem.name + '":' + prodItem.value + ''
+                break
+            case "boolean":
+                prodJson = prodJson + '"' + prodItem.name + '":' + prodItem.value + ''
+                break
+            case "string":
+                prodJson = prodJson + '"' + prodItem.name + '":"' + prodItem.value + '"'
+                break
+            default:
+                prodJson = prodJson + '"' + prodItem.name + '":"' + prodItem.value + '"'
+        }
         return prodJson
     })
     prodJson = prodJson + '}'
-    return  JSON.parse(prodJson)
+    return JSON.parse(prodJson)
 }
 
 const saveProduct = (newProduct) => {
@@ -23,7 +35,6 @@ const saveProduct = (newProduct) => {
 
 const updateProduct = async (idProd, product) => {
     const prodJson = productToJson(product)
-    console.log(prodJson)
     await updateDoc(doc(db, 'products', idProd), prodJson)
 }
 

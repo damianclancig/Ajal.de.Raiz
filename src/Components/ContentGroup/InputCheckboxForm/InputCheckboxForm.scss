@@ -1,65 +1,25 @@
-ul.ks-cboxtags {
-    list-style: none;
-    padding: 20px;
-}
-ul.ks-cboxtags li{
-  display: inline;
-}
-ul.ks-cboxtags li label{
-    display: inline-block;
-    background-color: rgba(255, 255, 255, .9);
-    border: 2px solid rgba(139, 139, 139, .3);
-    color: #adadad;
-    border-radius: 25px;
-    white-space: nowrap;
-    margin: 3px 0px;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
-    transition: all .2s;
+
+.checkbox {
+	font-family: 'Georgia Pro Light', 'Georgia', 'Times New Roman', Times, serif;
+    font-weight: normal;
+    background: rgba(194, 194, 194, 0.1);
+    border-radius: 12px;
+    border-left: 1px solid var(--border-left);
+    border-top: 1px solid var(--border-left);
+    border-bottom: 2px solid grey;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 4px 4px 10px var(--box-shadow-form);
+    box-sizing: border-box;
+    color: var(--color);
+    font-size: 15px;
+    height: 100%;
+	width: 100%;
+    outline: 0;
+    padding: 4px 15px 0;
+
 }
 
-ul.ks-cboxtags li label {
-    padding: 8px 12px;
-    cursor: pointer;
-}
-
-ul.ks-cboxtags li label::before {
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    font-size: 12px;
-    padding: 2px 6px 2px 2px;
-    transition: transform .3s ease-in-out;
-}
-
-ul.ks-cboxtags li input[type="checkbox"]:checked + label::before {
-    content: "\f00c";
-    transform: rotate(-360deg);
-    transition: transform .3s ease-in-out;
-}
-
-ul.ks-cboxtags li input[type="checkbox"]:checked + label {
-    border: 2px solid #1bdbf8;
-    background-color: #12bbd4;
-    color: #fff;
-    transition: all .2s;
-}
-
-ul.ks-cboxtags li input[type="checkbox"] {
-  display: absolute;
-}
-ul.ks-cboxtags li input[type="checkbox"] {
-  position: absolute;
-  opacity: 0;
-}
-ul.ks-cboxtags li input[type="checkbox"]:focus + label {
-  border: 2px solid #e9a1ff;
+.checkbox:checked + label {
+	color: rgb(67, 173, 63);
 }

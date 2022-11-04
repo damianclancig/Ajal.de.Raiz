@@ -13,7 +13,6 @@ const Content = () => {
     const [viewProductDetail, setViewProductDetail] = useState({})
 
     const handleClickShowProductDetail = (product) => {
-        // document.getElementsByTagName('body').classList.add('no-scroll')
         setToggleProductDetail(!toggleProductDetail);
         setClassActive(toggleProductDetail ? '' : 'active')
         setViewProductDetail(product)

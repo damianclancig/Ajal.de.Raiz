@@ -26,18 +26,22 @@ const ProductDetailContent = ({ product }) => {
             </section>
             <section className="longDescriptionSection-detailProduct">
                 <div className="longDescription-detailProduct">Descripción larga</div>
+                {product.brand || product.irrigationType || product.lightType || product.potNumber || product.potType || product.productType || product.weight
+                 || product.paymentTypes || product.discount ? 
                 <div className="feature">
                     <div>Características:</div>
-                    <div>Dimensiones: 10cm X 20cm</div>
-                    <div>Dimensiones: 10cm X 20cm</div>
-                    <div>Dimensiones: 10cm X 20cm</div>
-                    <div>Dimensiones: 10cm X 20cm</div>
-                    <div>Dimensiones: 10cm X 20cm</div>
-                    <div>Dimensiones: 10cm X 20cm</div>
-                    <div>Dimensiones: 10cm X 20cm</div>
-                    <div>Dimensiones: 10cm X 20cm</div>
+                    {product.brand ? <div>Dimensiones: {product.brand}</div> : ''}
+                    {product.irrigationType ? <div>Tipo de riego: {product.irrigationType}</div> : ''}
+                    {product.lightType ? <div>Tipo de luz: {product.lightType}</div> : ''}
+                    {product.potNumber ? <div>Número de maceta: {product.potNumber}</div> : ''}
+                    {product.potType ? <div>Tipo de maceta: {product.potType}</div> : ''}
+                    {product.productType ? <div>Tipo de producto: {product.productType}</div> : ''}
+                    {product.weight ? <div>Peso: {product.weight}</div> : ''}
+                    {product.paymentTypes ? <div>Tipos de pagos: {product.paymentTypes}</div> : ''}
+                    {product.discount ? <div>Descuento: {product.discount}</div> : ''}
                     <div>Last</div>
                 </div>
+                : '' }
             </section>
         </div>
     )

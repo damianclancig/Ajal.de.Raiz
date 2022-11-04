@@ -25,8 +25,8 @@ const ContextProvider = ({ children }) => {
         { name: 'brand', text: 'Marca', value: '', type: 'input'},
         { name: 'discount', text: 'Descuento', value: '', type: 'input', format: 'number'},
         { name: 'paymentTypes', text: 'Formas de pago', value: '', type: 'input'},
-        { name: 'important', text: 'Destacado', value: '', type: 'input'},
-        // { name: 'important', text: 'Destacado', value: '', type: 'checkbox'},
+        // { name: 'important', text: 'Destacado', value: '', type: 'input'},
+        { name: 'important', text: 'Destacado', value: false, type: 'checkbox'},
         { name: 'tags', text: 'Etiquetas', value: '', type: 'input'},
     ]
     const [productForm, setProductForm] = useState(initialValueForm);

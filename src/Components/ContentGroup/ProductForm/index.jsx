@@ -9,7 +9,7 @@ import InputUploadImage from '../InputUploadImage';
 import { faCheck, faPlus, faXmark } from '@fortawesome/free-solid-svg-icons'
 import './ProductForm.scss';
 import Modal from '../Modal';
-// import InputCheckboxForm from '../InputCheckboxForm';
+import InputCheckboxForm from '../InputCheckboxForm';
 // import InputSelectForm from '../InputSelectForm';
 
 const ProductForm = () => {
@@ -21,7 +21,11 @@ const ProductForm = () => {
 
 	const handleInputChange = (index, event) => {
 		let data = [...productForm];
-		data[index]["value"] = event.target.value;
+		if (data[index]["type"] === 'checkbox') {
+			data[index]["value"] = event.target.checked;
+		} else
+			data[index]["value"] = event.target.value;
+
 		data[index]["required"] = data[index]["required"] !== undefined ? !event.target.value && !Boolean(event.target.value) : undefined
 		setProductForm(data);
 	}
@@ -83,16 +87,15 @@ const ProductForm = () => {
 											required={input.required !== undefined ? input.required : undefined} onChange={event => handleInputChange(index, event)} />
 									case "image":
 										return <InputUploadImage key={"input_" + index} id="imageUpload" required={input.required !== undefined ? input.required : undefined} />
-									// case "checkbox":
-									// 	return <InputCheckboxForm key={"input_" + index} id={input.name} text={input.text} value={input.value}
-									// 	required={input.required !== undefined ? input.required : undefined} onChange={event => handleInputChange(index, event)} />
+									case "checkbox":
+										return <InputCheckboxForm key={"input_" + index} id={input.name} text={input.text} value={input.value}
+											onChange={event => handleInputChange(index, event)} />
 									// case "select":
 									// 	return <InputSelectForm />
 									default:
 										return ''
 								}
-							}
-							)
+							})
 						}
 					</div>
 
